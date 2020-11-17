@@ -1,3 +1,13 @@
+
+*{ margin-top: 10px;
+    margin-bottom: 0;
+    margin-left: 0;
+    background-color: #ff9999;
+    font-family:Arial, Helvetica, sans-serif ;
+    font-size: 12;}
+
+
+
 /* Hacemos el menú horizontal, es una lista desordenada con la etiqueta de clase horizontal */
 ul.horizontal{ 
     width: 95%;
