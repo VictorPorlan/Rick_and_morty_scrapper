@@ -1,7 +1,5 @@
 
-*{ margin-top: 10px;
-    margin-bottom: 0;
-    margin-left: 0;
+*{ margin-top: 0px;
     background-color: #ff9999;
     font-family:Arial, Helvetica, sans-serif ;
     font-size: 12;}
@@ -9,16 +7,16 @@
 
 
 /* Hacemos el menú horizontal, es una lista desordenada con la etiqueta de clase horizontal */
-ul.horizontal{ 
-    width: 95%;
-    text-align: left ;
+ul.horizontal{
+    padding:0;
     margin: 0;
+    width: 100%
 
 }
 
 
 ul.horizontal li{
-    width :20%;
+    width: 20%;
     text-align: center;
     display:inline;
     float: left;
