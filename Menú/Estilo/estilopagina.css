@@ -1,0 +1,13 @@
+body{margin-right: 20%;
+margin-left: 20%;
+}
+html{background-color: grey;}
+.superdiv{margin-top: 10%;
+background-color: white;
+text-align: center;}
+ul{list-style-type: none;}
+html {
+    background-image: url("fondo.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
