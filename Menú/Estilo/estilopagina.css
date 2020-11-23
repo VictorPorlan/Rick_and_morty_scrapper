@@ -3,6 +3,7 @@
 body{margin-right: 20%;
 margin-left: 20%;
 }
+<<<<<<< HEAD
 @font-face { font-family: "Get Schwifty Regular";
   src: url("../Tipografia/get_schwifty.ttf") format("ttf");
 }
@@ -12,12 +13,39 @@ color: rgb(38, 235, 176);
 font-size: 7em;}
 
 html{background-color: grey;}
+=======
+
+html{background-color: grey;
+}
+
+>>>>>>> bdac988ba97b24478f549ef877727c42e5dadc86
 .superdiv{margin-top: 10%;
-background-color: white;
-text-align: center;}
+background-color: transparent;
+text-align: center;
+}
+
 ul{list-style-type: none;}
+
 html {
     background-image: url("fondo.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
   }
+
+  div.pack{padding: 100px; 
+    border: 10px solid purple; 
+    border-radius: 20px; 
+    margin-top: 50px; 
+    margin-left: 20px;
+    margin-right: 20px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+div.titulo{padding: 100px; 
+  border: 10px solid blue; 
+  border-radius: 20px; 
+  margin-top: 50px; 
+  margin-left: 20px;
+  margin-right: 20px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.8);}
