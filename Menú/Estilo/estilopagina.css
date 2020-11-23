@@ -3,23 +3,34 @@
 body{margin-right: 20%;
 margin-left: 20%;
 }
-
+@font-face { font-family: "Get Schwifty Regular";
+  src: url("../Tipografia/get_schwifty.ttf") format("ttf");
+}
 html{background-color: grey;
 }
 
-.superdiv{margin-top: 10%;
-background-color: transparent;
+a.logo img{width: 20%;
+height: 20%;
+margin-top: 0px;}
+
+h1.principal{font-family: "Get Schwifty Regular";
+color: rgb(146, 235, 4);
+font-size: 50px;
 text-align: center;
-}
+margin-top:0x; }
 
+html{background-color: grey;}
+.superdiv{margin-top: 10%;
+  background-color: transparent;
+  text-align: center;
+  }
+  
 ul{list-style-type: none;}
-
 html {
     background-image: url("fondo.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
   }
-
   div.pack{padding: 100px; 
     border: 10px solid purple; 
     border-radius: 20px; 
