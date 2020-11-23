@@ -3,20 +3,42 @@
 body{margin-right: 20%;
 margin-left: 20%;
 }
-@font-face { font-family: "Get Schwifty Regular";
-  src: url("../Tipografia/get_schwifty.ttf") format("ttf");
+
+@font-face { font-family: "Get Schwifty";
+  src: url("..\Tipografia\get_schwifty.ttf") format("ttf");
 }
 
-h1.principal{font-family: "Get Schwifty Regular";
-color: aliceblue;}
-
-html{background-color: grey;}
+h1.principal{font-family: "Get Schwifty";
+  color: rgb(146, 235, 4);
+  font-size: 50px;
+}
 .superdiv{margin-top: 10%;
-background-color: white;
-text-align: center;}
+background-color: transparent;
+text-align: center;
+}
+
 ul{list-style-type: none;}
+
 html {
     background-image: url("fondo.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
   }
+
+  div.pack{padding: 100px; 
+    border: 10px solid purple; 
+    border-radius: 20px; 
+    margin-top: 50px; 
+    margin-left: 20px;
+    margin-right: 20px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+div.titulo{padding: 100px; 
+  border: 10px solid blue; 
+  border-radius: 20px; 
+  margin-top: 50px; 
+  margin-left: 20px;
+  margin-right: 20px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.8);}
