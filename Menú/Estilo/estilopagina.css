@@ -4,13 +4,11 @@ body{margin-right: 20%;
 margin-left: 20%;
 }
 
-html{background-color: grey;
+@font-face { font-family: "Get Schwifty";
+  src: url("..\Tipografia\get_schwifty.ttf") format("ttf");
 }
 
-@font-face { font-family: "Get Schwifty Regular";
-  src: url("../Tipografia/get_schwifty.ttf") format("ttf");
-}
-h1.principal{font-family: "Get Schwifty Regular";
+h1.principal{font-family: "Get Schwifty";
   color: rgb(146, 235, 4);
   font-size: 50px;
 }
