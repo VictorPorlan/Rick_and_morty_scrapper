@@ -1,7 +1,16 @@
 *{font-family: Arial, Helvetica, sans-serif;}
+
 body{margin-right: 20%;
 margin-left: 20%;
 }
+@font-face { font-family: "Get Schwifty Regular";
+  src: url("../Tipografia/get_schwifty.ttf") format("ttf");
+}
+
+h1.principal{font-family: "Get Schwifty Regular";
+color: rgb(38, 235, 176);
+font-size: 7em;}
+
 html{background-color: grey;}
 .superdiv{margin-top: 10%;
 background-color: white;
