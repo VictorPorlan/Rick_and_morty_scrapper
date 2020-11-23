@@ -10,7 +10,10 @@ html{background-color: grey;
 @font-face { font-family: "Get Schwifty Regular";
   src: url("../Tipografia/get_schwifty.ttf") format("ttf");
 }
-
+h1.principal{font-family: "Get Schwifty Regular";
+  color: rgb(146, 235, 4);
+  font-size: 50px;
+}
 .superdiv{margin-top: 10%;
 background-color: transparent;
 text-align: center;
