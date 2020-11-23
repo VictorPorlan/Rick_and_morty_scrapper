@@ -7,6 +7,10 @@ margin-left: 20%;
 html{background-color: grey;
 }
 
+@font-face { font-family: "Get Schwifty Regular";
+  src: url("../Tipografia/get_schwifty.ttf") format("ttf");
+}
+
 .superdiv{margin-top: 10%;
 background-color: transparent;
 text-align: center;
