@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 *{font-family: Arial, Helvetica, sans-serif;
   background-image: url("fondo.jpg");
   background-repeat: no-repeat;
@@ -6,11 +7,15 @@
   }
 
 div{background-color: grey;}
+=======
+*{font-family: Arial, Helvetica, sans-serif;}
+>>>>>>> 97fb7a4559610e403a23a7fb41f0f205836ab022
 
 body{margin-right: 20%;
 margin-left: 20%;
 }
 
+<<<<<<< HEAD
 @font-face{ font-family: "Get Schwifty Regular";
   src: url("../Tipografia/get_schwifty.ttf") format("ttf");
 }
@@ -24,12 +29,28 @@ h1.principal{font-family: "Get Schwifty Regular";
 color: rgb(146, 235, 4);
 font-size: 50px;}
 
+=======
+@font-face { font-family: "Get Schwifty";
+  src: url("..\Tipografia\get_schwifty.ttf") format("ttf");
+}
+
+h1.principal{font-family: "Get Schwifty";
+  color: rgb(146, 235, 4);
+  font-size: 50px;
+}
+>>>>>>> 97fb7a4559610e403a23a7fb41f0f205836ab022
 .superdiv{margin-top: 10%;
 background-color: transparent;
 text-align: center;
 }
 
 ul{list-style-type: none;}
+
+html {
+    background-image: url("fondo.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
 
   div.pack{padding: 100px; 
     border: 10px solid purple; 
