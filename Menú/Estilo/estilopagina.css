@@ -1,8 +1,11 @@
-*{font-family: Arial, Helvetica, sans-serif;}
+*{font-family:  "Dr.Marz, Arial, Sans-serif"}
 
 body{margin-right: 20%;
 margin-left: 20%;
 }
+
+@font-face{font-family:"Dr.Marz";
+  src: url("..\..\Tipografia\Dr.Marz.otf") format("otf")}
 
 @font-face { font-family: "Get Schwifty";
   src: url("..\..\Tipografia\get_schwifty.ttf") format("ttf");
@@ -49,6 +52,7 @@ html {
     background-attachment: fixed;
   }
 
+
   div.pack{padding: 100px; 
     border: 10px solid purple; 
     border-radius: 20px; 
@@ -56,13 +60,14 @@ html {
     margin-left: 20px;
     margin-right: 20px;
     color: white;
-    background-color: rgba(0, 0, 0, 0.8);
-}
-div.titulo{padding: 100px; 
+    background-color: rgba(0, 0, 0, 0.8);}
+
+    div.titulo{padding: 100px; 
   border: 10px solid blue; 
   border-radius: 20px; 
   margin-top: 50px; 
   margin-left: 20px;
   margin-right: 20px;
   color: white;
-  background-color: rgba(0, 0, 0, 0.8);}
+  background-color: rgba(0, 0, 0, 0.8);
+  }
