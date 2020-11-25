@@ -5,13 +5,37 @@ margin-left: 20%;
 }
 
 @font-face { font-family: "Get Schwifty";
-  src: url("..\Tipografia\get_schwifty.ttf") format("ttf");
+  src: url("..\..\Tipografia\get_schwifty.ttf") format("ttf");
+}
+@font-face{ font-family: "Shlop";
+  src: url("..\..\Tipografia\pepinillo.ttf") format("ttf");
 }
 
 h1.principal{font-family: "Get Schwifty";
   color: rgb(146, 235, 4);
-  font-size: 50px;
+  font-size: 70px;
+  text-shadow:
+  -1.5px -1.5px rgb(54, 87, 1),  
+   1.5px -1.5px rgb(54, 87, 1),
+  -1.5px 1.5px  rgb(54, 87, 1),
+   1.5px 1.5px  rgb(54, 87, 1);
+;
 }
+
+div.logo{text-align: center;
+      }
+
+a img.logo{width: 25%;
+        height: 25%;
+        }
+
+/*Este es el título de tipo de pack*/
+div.titulo h1{font-family: "Shlop";
+  color:rgb(146, 235, 4);
+  font-size: 50px;}
+
+
+
 .superdiv{margin-top: 10%;
 background-color: transparent;
 text-align: center;
