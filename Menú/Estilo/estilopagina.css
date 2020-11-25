@@ -23,9 +23,9 @@ h1.principal{font-family: "Get Schwifty";
   font-size: 70px;
   text-shadow:
   -1.5px -1.5px rgb(54, 87, 1),  
-   1.5px -1.5px rgb(54, 87, 1),
+  1.5px -1.5px rgb(54, 87, 1),
   -1.5px 1.5px  rgb(54, 87, 1),
-   1.5px 1.5px  rgb(54, 87, 1);
+  1.5px 1.5px  rgb(54, 87, 1);
 ;
 }
 
@@ -38,8 +38,14 @@ a img.logo{width: 25%;
 
 /*Este es el título de tipo de pack*/
 div.titulo h1{font-family: "Shlop";
-  color:rgb(146, 235, 4);
-  font-size: 50px;}
+  color:rgb(122, 196, 4);
+  font-size: 50px;
+  letter-spacing: 2px;
+  text-shadow:
+  -1.5px -1.5px rgb(31, 51, 0),  
+  1.5px -1.5px rgb(31, 51, 0),
+  -1.5px 1.5px  rgb(31, 51, 0),
+  1.5px 1.5px rgb(31, 51, 0);}
 
 
 
@@ -75,3 +81,5 @@ html {
   color: white;
   background-color: rgba(0, 0, 0, 0.8);
   }
+
+  div.pack li{font-family:"Dr.Marz";}
