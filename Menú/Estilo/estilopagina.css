@@ -9,14 +9,9 @@
   src: url("..\..\Tipografia\pepinillo.ttf") format("ttf");
 }
 
-
-*{font-family:"Dr.Marz, Arial, Sans-serif"}
-
 body{margin-right: 20%;
 margin-left: 20%;
 }
-
-
 
 h1.principal{font-family: "Get Schwifty";
   color: rgb(146, 235, 4);
@@ -70,7 +65,8 @@ html {
     margin-left: 20px;
     margin-right: 20px;
     color: white;
-    background-color: rgba(0, 0, 0, 0.8);}
+    background-color: rgba(0, 0, 0, 0.8);
+    font-family: Arial, Helvetica, sans-serif;}
 
     div.titulo{padding: 100px; 
   border: 10px solid blue; 
