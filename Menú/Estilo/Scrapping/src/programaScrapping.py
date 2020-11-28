@@ -1,9 +1,16 @@
 from urllib.request import urlopen
-url = "http://olympus.realpython.org/profiles/poseidon"
+url = "https://bertavr.github.io/Proyecto_Rick_y_Morty/index.html"
 page = urlopen(url)
 html_bytes = page.read()
 html = html_bytes.decode("utf-8")
-principio = html.find("Name:")
-final = html.find ("<", principio)
-Nombre = html[principio+6 : final]
-print(Nombre)
+
+
+def conseguir_links(html):
+    links=[]
+    while True:
+        url, endpos = get_next_target(page)
+        if url:
+            links.append(url)
+            html=html[endps:]
+            else:
+                break
