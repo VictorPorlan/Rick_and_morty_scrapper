@@ -20,3 +20,5 @@ def conseguir_links(html):
             break
     return links    
 print(conseguir_links(html))
+if __name__ == "__main__":
+    assert conseguir_links(html) == ['https://bertavr.github.io/Proyecto_Rick_y_Morty/index.html', 'https://bertavr.github.io/Proyecto_Rick_y_Morty/premium.html', 'https://bertavr.github.io/Proyecto_Rick_y_Morty/standard.html', 'https://bertavr.github.io/Proyecto_Rick_y_Morty/basic.html',]
