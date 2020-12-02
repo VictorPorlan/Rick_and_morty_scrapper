@@ -27,9 +27,6 @@ def conseguir_links(html):
     assert isinstance(links, list)
     assert len(links) == html.count('https')
     
-    def localizar_paquetes(html):
-        conseguir_links(html)
-        for enlace in links:
             
         
         
