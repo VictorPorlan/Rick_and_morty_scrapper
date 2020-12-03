@@ -29,18 +29,22 @@ def crear_paquetes(html):
         objetos = crear_contenidos(html_contenidos)
         return pack
 
-def crear_contenidos(html):
-        contenido = {}
+def crear_objeto(html):
+        objeto = {}
         final_pack = html.find('</div>')
         localizador_objeto = html.find('objeto')
-        while True:
-                inicio_nombre = html.find('objeto')
-                marca_inicial_nombre = html.find('>',inicio_nombre)
-                marca_final_nombre = html.find('<',inicio_nombre)
-                nombre_pack = html[marca_inicial_nombre +1:marca_final_nombre]
+        inicio_nombre = html.find('objeto')
+        marca_inicial_nombre = html.find('>',inicio_nombre)
+        marca_final_nombre = html.find('<',inicio_nombre)
+        nombre_pack = html[marca_inicial_nombre +1:marca_final_nombre]
+        objeto['nombre'] = nombre_pack
+        html = html[marca_final_nombre:]
+        caracteristicas = crear_caracteristicas(html)
+        return objeto
 
-                return nombre_pack
-                break
+
+def crear_caracteristicas(html):
+        
 
 
 print(crear_paquetes(html))
