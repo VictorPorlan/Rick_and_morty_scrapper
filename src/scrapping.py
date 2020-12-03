@@ -26,7 +26,7 @@ def crear_paquetes(html):
         ancho = html[marca_inicial_ancho+2 : marca_final_ancho]
         pack['dimensiones'] = {'altura':altura, 'ancho':ancho}
         html_contenidos = html[marca_final_ancho:]
-        objetos = crear_contenidos(html_contenidos)
+        objetos = crear_objeto(html_contenidos)
         return pack
 
 def crear_objeto(html):
@@ -44,15 +44,30 @@ def crear_objeto(html):
 
 
 def crear_caracteristicas(html):
-        
+        caracteristicas = {}
+        final_caracteristicas = html.find('</ul>')
+        inicio_caracteristica = html.find('caracteristica')
+        while final_caracteristicas > inicio_caracteristica:
+                inicio_caracteristica = html.find('caracteristica')
+                inicio_nombre = html.find('>')
+                final_nombre = html.find(':')
+                nombre = html[inicio_nombre+1: final_nombre]
+                final_caracteristica = html.find('<')
+                caracteristica = html[final_nombre+2: final_caracteristica]
+                caracteristicas[nombre] = caracteristica
+                html= html[final_caracteristica:]
+                inicio_caracteristica = html.find('caracteristica')
+                break
+        return caracteristicas
+
+print (crear_caracteristicas(html[1571:]))
 
 
-print(crear_paquetes(html))
-print(crear_contenidos(html))
 def convertir_link_string(enlace):
         page = urlopen(enlace)
         html_bytes = page.read()
         html_link = html_bytes.decode("utf-8")
+
 def sinNombre(html):
         conseguir_links(html)
         for enlace in links:
