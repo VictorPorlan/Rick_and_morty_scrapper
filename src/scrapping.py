@@ -6,16 +6,33 @@ page = urlopen(url)
 html_bytes = page.read()
 html = html_bytes.decode("utf-8")
 
-def localizar_paquetes(html):
+def crear_paquetes(html):
         pack = {}
         inicio_pack = html.find('nombre')
-        inicio_nombre = html.find('>', inicio_pack)
-        final_nombre = html.find('<', inicio_nombre)
-        nombre = html[inicio_nombre+1:final_nombre]
-        pack['name'] = nombre
-        return inicio_pack
+        marca_inicial_nombre = html.find('>', inicio_pack)
+        marca_final_nombre = html.find('<', marca_inicial_nombre)
+        nombre = html[marca_inicial_nombre+1:marca_final_nombre]
 
-print(localizar_paquetes(html))
+        pack['name'] = nombre
+
+        inicio_dimensiones = html.find('altura')
+        marca_inicial_altura = html.find('>',inicio_dimensiones)
+        marca_final_altura = html.find('<',inicio_dimensiones)
+        altura = html[marca_inicial_altura+1 : marca_final_altura]
+
+        inicio_ancho = html.find('ancho')
+        marca_inicial_ancho = html.find('>',inicio_ancho)
+        marca_final_ancho = html.find('<',inicio_ancho)
+        
+        ancho = html[marca_inicial_ancho+1 : marca_final_ancho]
+
+        pack['dimensiones'] = {altura, ancho}
+        
+
+
+        return pack
+
+print(crear_paquetes(html))
 
 def convertir_link_string(enlace):
         page = urlopen(enlace)
