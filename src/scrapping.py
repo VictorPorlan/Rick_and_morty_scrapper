@@ -40,6 +40,7 @@ def crear_objeto(html):
         objeto['nombre'] = nombre_pack
         html = html[marca_final_nombre:]
         caracteristicas = crear_caracteristicas(html)
+        objeto['caracteristicas'] = caracteristicas
         return objeto
 
 
@@ -59,7 +60,7 @@ def crear_caracteristicas(html):
                 inicio_caracteristica = html.find('caracteristica')
         return caracteristicas
 
-print (crear_caracteristicas(html[1571:]))
+print (crear_objeto(html[1300:]))
 
 
 def convertir_link_string(enlace):
