@@ -30,13 +30,21 @@ def crear_paquetes(html):
         return pack
 
 def crear_contenidos(html):
+        contenido = {}
         final_pack = html.find('</div>')
         localizador_objeto = html.find('objeto')
-        while final_pack > localizador_objeto:
-                marca_inicial_nombre = html.find('objeto')
+        while True:
+                inicio_nombre = html.find('objeto')
+                marca_inicial_nombre = html.find('>',inicio_nombre)
+                marca_final_nombre = html.find('<',inicio_nombre)
+                nombre_pack = html[marca_inicial_nombre +1:marca_final_nombre]
+
+                return nombre_pack
+                break
+
 
 print(crear_paquetes(html))
-
+print(crear_contenidos(html))
 def convertir_link_string(enlace):
         page = urlopen(enlace)
         html_bytes = page.read()
