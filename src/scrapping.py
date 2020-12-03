@@ -49,15 +49,14 @@ def crear_caracteristicas(html):
         inicio_caracteristica = html.find('caracteristica')
         while final_caracteristicas > inicio_caracteristica:
                 inicio_caracteristica = html.find('caracteristica')
-                inicio_nombre = html.find('>')
-                final_nombre = html.find(':')
+                inicio_nombre = html.find('>',inicio_caracteristica)
+                final_nombre = html.find(':',inicio_caracteristica)
                 nombre = html[inicio_nombre+1: final_nombre]
-                final_caracteristica = html.find('<')
+                final_caracteristica = html.find('<',inicio_caracteristica)
                 caracteristica = html[final_nombre+2: final_caracteristica]
                 caracteristicas[nombre] = caracteristica
                 html= html[final_caracteristica:]
                 inicio_caracteristica = html.find('caracteristica')
-                break
         return caracteristicas
 
 print (crear_caracteristicas(html[1571:]))
