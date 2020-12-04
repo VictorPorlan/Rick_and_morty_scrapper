@@ -8,17 +8,20 @@ html_link = html_bytes.decode("utf-8")
 
 
 def crear_caracteristicas(html):
+        
         caracteristicas = {}
         final_caracteristicas = html.find('</ul>')
         inicio_caracteristica = html.find('caracteristica')
+        
         while final_caracteristicas > inicio_caracteristica:
                 inicio_nombre = html.find('>',inicio_caracteristica)
                 final_nombre = html.find(':',inicio_caracteristica)
                 nombre = html[inicio_nombre+1: final_nombre]
-                final_caracteristica = html.find('<',inicio_caracteristica)
+                final_caracteristica = html.find('<',inicio_nombre)
                 caracteristica = html[final_nombre+2: final_caracteristica]
                 caracteristicas[nombre] = caracteristica
                 html= html[final_caracteristica:]
+                final_caracteristicas = html.find('</ul>')
                 inicio_caracteristica = html.find('caracteristica')
         return caracteristicas, final_caracteristica
 
@@ -28,7 +31,6 @@ def crear_objeto(html):
         inicio_nombre = html.find('objeto')
         marca_inicial_nombre = html.find('>',inicio_nombre)
         marca_final_nombre = html.find('<',inicio_nombre)
-        print (html)
         nombre_pack = html[marca_inicial_nombre +1:marca_final_nombre]
         objeto['nombre'] = nombre_pack
         html = html[marca_final_nombre:]
@@ -38,7 +40,6 @@ def crear_objeto(html):
 
 def crear_paquetes(html):
         pack = {}
-        print(html)
         inicio_pack = html.find('nombre')
         marca_inicial_nombre = html.find('>', inicio_pack)
         marca_final_nombre = html.find('<', marca_inicial_nombre)
@@ -55,7 +56,6 @@ def crear_paquetes(html):
         ancho = html[marca_inicial_ancho+2 : marca_final_ancho]
         pack['dimensiones'] = {'altura':altura, 'ancho':ancho}
         html = html[marca_final_ancho:]
-        print(html)
         final_pack = html.find('</div>')
         objeto, final_caracteristica = crear_objeto(html)
         html = html[final_caracteristica:]
@@ -64,7 +64,7 @@ def crear_paquetes(html):
                 objeto, final_caracteristica = crear_objeto(html)
                 html = html[final_caracteristica:]
                 pack['objetos']=[objeto]
-                break
+                print (pack)
         return pack
 
 print (crear_paquetes(html_link))
