@@ -31,5 +31,3 @@ print(conseguir_links(html_index))
         
         
             
-
-
