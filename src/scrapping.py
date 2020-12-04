@@ -1,10 +1,5 @@
 from urllib.request import urlopen
 
-<<<<<<< HEAD
-def localizar_paquetes(html):
-        conseguir_links(html)
-        for enlace in links
-=======
 url = "https://bertavr.github.io/Proyecto_Rick_y_Morty/basic.html"
 page = urlopen(url)
 html_bytes = page.read()
@@ -74,4 +69,3 @@ def crear_paquetes(html):
         return pack
 
 print (crear_paquetes(html_link))
->>>>>>> 6dc6e83b6758b8cc87b3ea13c16e30559a3674de
