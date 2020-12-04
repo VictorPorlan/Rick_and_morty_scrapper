@@ -5,18 +5,7 @@ page = urlopen(url)
 html_bytes = page.read()
 html_link = html_bytes.decode("utf-8")
 
-def crear_objeto(html):
-        objeto = {}
-        localizador_objeto = html.find('objeto')
-        inicio_nombre = html.find('objeto')
-        marca_inicial_nombre = html.find('>',inicio_nombre)
-        marca_final_nombre = html.find('<',inicio_nombre)
-        nombre_pack = html[marca_inicial_nombre +1:marca_final_nombre]
-        objeto['nombre'] = nombre_pack
-        html = html[marca_final_nombre:]
-        caracteristicas, final_caracteristica = crear_caracteristicas(html)
-        objeto['caracteristicas'] = caracteristicas
-        return objeto, final_caracteristica
+
 
 def crear_caracteristicas(html):
         caracteristicas = {}
@@ -32,8 +21,21 @@ def crear_caracteristicas(html):
                 caracteristicas[nombre] = caracteristica
                 html= html[final_caracteristica:]
                 inicio_caracteristica = html.find('caracteristica')
-                print(caracteristica)
         return caracteristicas, final_caracteristica
+
+def crear_objeto(html):
+        objeto = {}
+        localizador_objeto = html.find('objeto')
+        inicio_nombre = html.find('objeto')
+        marca_inicial_nombre = html.find('>',inicio_nombre)
+        marca_final_nombre = html.find('<',inicio_nombre)
+        print (html)
+        nombre_pack = html[marca_inicial_nombre +1:marca_final_nombre]
+        objeto['nombre'] = nombre_pack
+        html = html[marca_final_nombre:]
+        caracteristicas, final_caracteristica = crear_caracteristicas(html)
+        objeto['caracteristicas'] = caracteristicas
+        return objeto, final_caracteristica
 
 def crear_paquetes(html):
         pack = {}
@@ -43,6 +45,7 @@ def crear_paquetes(html):
         marca_final_nombre = html.find('<', marca_inicial_nombre)
         nombre = html[marca_inicial_nombre+1:marca_final_nombre]
         pack['name'] = nombre
+
         inicio_dimensiones = html.find('altura')
         marca_inicial_altura = html.find(':',inicio_dimensiones)
         marca_final_altura = html.find('<',inicio_dimensiones)
@@ -53,21 +56,16 @@ def crear_paquetes(html):
         ancho = html[marca_inicial_ancho+2 : marca_final_ancho]
         pack['dimensiones'] = {'altura':altura, 'ancho':ancho}
         html = html[marca_final_ancho:]
+        print(html)
         final_pack = html.find('</div>')
         objeto, final_caracteristica = crear_objeto(html)
         html = html[final_caracteristica:]
         pack['objetos']=[objeto]
-        print(final_pack, final_caracteristica)
         while final_pack > final_caracteristica:
                 objeto, final_caracteristica = crear_objeto(html)
                 html = html[final_caracteristica:]
                 pack['objetos']=[objeto]
                 break
         return pack
-loc = html_link.find('class="pack"')
-print (crear_paquetes(html_link[loc:]))
 
-
-
-
-        
+print (crear_paquetes(html_link))
