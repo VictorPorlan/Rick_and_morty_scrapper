@@ -6,4 +6,3 @@ html = html_bytes.decode("utf-8")
 principio = html.find("pack>")
 final = html.find ("<")
 nombre = html[principio + 1 : final]
-print (nombre)
