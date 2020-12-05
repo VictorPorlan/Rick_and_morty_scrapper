@@ -6,13 +6,12 @@ html_bytes = page.read()
 html_link = html_bytes.decode("utf-8")
 
 def crear_objeto(html):
-        objeto = {}
+        carac = {}
         inicio_nombre = html.find('objeto')
         marca_inicial_nombre = html.find('3>',inicio_nombre)
         marca_final_nombre = html.find('<',marca_inicial_nombre)
         nombre_pack = html[marca_inicial_nombre+2:marca_final_nombre]
-        objeto['nombre'] = nombre_pack
         html = html[marca_final_nombre:]
         caracteristicas, html = crear_caracteristicas(html)
-        objeto['caracteristicas'] = caracteristicas
-        return objeto, html
+        carac['caracteristicas'] = caracteristicas
+        return carac, html, nombre_pack
