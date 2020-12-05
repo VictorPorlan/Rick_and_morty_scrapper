@@ -18,5 +18,7 @@ def crear_caracteristicas(html):
                 html= html[final_caracteristica:]
                 final_caracteristicas = html.find('/section')
                 inicio_caracteristica = html.find('caracteristica')
+                if inicio_caracteristica == -1:
+                        break
         html = html[final_caracteristicas+3:]
         return listado, html

@@ -35,4 +35,6 @@ def crear_paquetes(html):
                 pack['objetos'].append(objeto)
                 final_caracteristicas = html.find('section')
                 final_pack = html.find('/div')
+                if final_caracteristicas == -1:
+                        break
         return pack,html

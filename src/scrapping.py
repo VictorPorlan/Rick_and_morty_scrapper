@@ -7,8 +7,11 @@ html_link = html_bytes.decode("utf-8")
 
 def scrapping (html):
     paquetes = []
-    while html.find('nombre') != -1:
+    nombre = html.find('nombre')
+    while nombre != -1:
         pack, html = crear_paquetes(html)
         paquetes.append(pack)
+        nombre = html.find('nombre')
+        print(html)
     return paquetes
 print(scrapping(html_link))
