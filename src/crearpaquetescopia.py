@@ -1,7 +1,7 @@
 
 from urllib.request import urlopen
 from crear_objeto import crear_objeto
-from crear_caracteristicas import bucle_crawler
+from crear_caracteristicas import crear_caracteristicas
 url = "https://bertavr.github.io/Proyecto_Rick_y_Morty/basic.html"
 page = urlopen(url)
 html_bytes = page.read()
@@ -29,14 +29,17 @@ def crear_paquetes(html):
         
         html = html[marca_final_ancho:]
         objeto, html = crear_objeto(html)
-        final_pack = html.find('cerrar')
-        final_caracteristicas = html.find('final')
+        carac, html, nombre_pack = crear_objeto(html)
+        final_pack = html.find('/div')
+        final_caracteristicas = html.find('section')
         pack['objetos']=[objeto]
+        pack[nombre_pack]=carac
         while final_pack > final_caracteristicas:
                 objeto, html = crear_objeto(html)
                 pack['objetos'].append(objeto)
-                final_caracteristicas = html.find('final')
-                final_pack = html.find('cerrar')
-                print ( final_pack, final_caracteristicas)
-                print (html)
-        return pack
+                carac, html, nombre_pack = crear_objeto(html)
+                pack[nombre_pack] = carac
+                final_caracteristicas = html.find('section')
+                final_pack = html.find('/div')
+                if final_caracteristicas == -1:
+                    return pack
