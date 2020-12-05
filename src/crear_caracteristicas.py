@@ -1,6 +1,8 @@
 from urllib.request import urlopen
-
-
+url = "https://bertavr.github.io/Proyecto_Rick_y_Morty/basic.html"
+page = urlopen(url)
+html_bytes = page.read()
+html_link = html_bytes.decode("utf-8")
 
 def crear_caracteristicas(html):
         listado = {}
@@ -15,7 +17,8 @@ def crear_caracteristicas(html):
                 listado[nombre] = caracteristica
                 html= html[final_caracteristica:]
                 final_caracteristicas = html.find('/section')
-                nicio_caracteristica = html.find('caracteristica')
-                html = html[final_caracteristicas+3:]
-                return listado, html
-        return crear_caracteristicas()
+                inicio_caracteristica = html.find('caracteristica')
+                if inicio_caracteristica == -1:
+                        break
+        html = html[final_caracteristicas+3:]
+        return listado, html

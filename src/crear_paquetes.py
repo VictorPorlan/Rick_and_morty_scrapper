@@ -1,20 +1,19 @@
 from urllib.request import urlopen
 from crear_objeto import crear_objeto
-from crear_caracteristicas import bucle_crawler
 url = "https://bertavr.github.io/Proyecto_Rick_y_Morty/basic.html"
 page = urlopen(url)
 html_bytes = page.read()
 html_link = html_bytes.decode("utf-8")
 
-
-pack = {}
-
-def crear_paquetes_pack(html):
+def crear_paquetes(html):
+        pack = {}
         inicio_pack = html.find('nombre')
         marca_inicial_nombre = html.find('>', inicio_pack)
         marca_final_nombre = html.find('<', marca_inicial_nombre)
         nombre = html[marca_inicial_nombre+1:marca_final_nombre]
+
         pack['name'] = nombre
+
         inicio_dimensiones = html.find('altura')
         marca_inicial_altura = html.find(':',inicio_dimensiones)
         marca_final_altura = html.find('<',inicio_dimensiones)
@@ -23,7 +22,9 @@ def crear_paquetes_pack(html):
         marca_inicial_ancho = html.find(':',inicio_ancho)
         marca_final_ancho = html.find('<',inicio_ancho)
         ancho = html[marca_inicial_ancho+2 : marca_final_ancho]
+
         pack['dimensiones'] = {'altura':altura, 'ancho':ancho}
+        
         html = html[marca_final_ancho:]
         carac, html, nombre_pack = crear_objeto(html)
         final_pack = html.find('/div')
@@ -36,4 +37,4 @@ def crear_paquetes_pack(html):
                 final_pack = html.find('/div')
                 if final_caracteristicas == -1:
                         break
-        return pack,html 
+        return pack,html

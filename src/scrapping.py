@@ -12,6 +12,5 @@ def scrapping (html):
         pack, html = crear_paquetes(html)
         paquetes.append(pack)
         nombre = html.find('nombre')
-        print(html)
     return paquetes
 print(scrapping(html_link))
