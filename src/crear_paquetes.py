@@ -1,6 +1,5 @@
 from urllib.request import urlopen
 from crear_objeto import crear_objeto
-from crear_caracteristicas import crear_caracteristicas
 url = "https://bertavr.github.io/Proyecto_Rick_y_Morty/basic.html"
 page = urlopen(url)
 html_bytes = page.read()
@@ -36,5 +35,5 @@ def crear_paquetes(html):
                 pack['objetos'].append(objeto)
                 final_caracteristicas = html.find('section')
                 final_pack = html.find('/div')
-        return pack
+        return pack, html
 print (crear_paquetes(html_link))

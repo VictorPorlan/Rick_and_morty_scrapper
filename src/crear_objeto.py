@@ -1,5 +1,5 @@
 from urllib.request import urlopen
-from src.crear_caracteristicas import crear_caracteristicas
+from crear_caracteristicas import crear_caracteristicas
 url = "https://bertavr.github.io/Proyecto_Rick_y_Morty/basic.html"
 page = urlopen(url)
 html_bytes = page.read()

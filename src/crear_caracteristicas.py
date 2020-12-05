@@ -1,5 +1,4 @@
 from urllib.request import urlopen
-from src.crear_objeto import crear_objeto
 url = "https://bertavr.github.io/Proyecto_Rick_y_Morty/basic.html"
 page = urlopen(url)
 html_bytes = page.read()
