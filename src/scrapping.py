@@ -44,7 +44,9 @@ def crear_paquetes(html):
         marca_inicial_nombre = html.find('>', inicio_pack)
         marca_final_nombre = html.find('<', marca_inicial_nombre)
         nombre = html[marca_inicial_nombre+1:marca_final_nombre]
+
         pack['name'] = nombre
+
         inicio_dimensiones = html.find('altura')
         marca_inicial_altura = html.find(':',inicio_dimensiones)
         marca_final_altura = html.find('<',inicio_dimensiones)
@@ -53,7 +55,9 @@ def crear_paquetes(html):
         marca_inicial_ancho = html.find(':',inicio_ancho)
         marca_final_ancho = html.find('<',inicio_ancho)
         ancho = html[marca_inicial_ancho+2 : marca_final_ancho]
+
         pack['dimensiones'] = {'altura':altura, 'ancho':ancho}
+        
         html = html[marca_final_ancho:]
         objeto, html = crear_objeto(html)
         final_pack = html.find('cerrar')
