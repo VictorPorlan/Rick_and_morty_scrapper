@@ -27,11 +27,10 @@ def crear_caracteristicas(html):
 
 def crear_objeto(html):
         objeto = {}
-        localizador_objeto = html.find('objeto')
         inicio_nombre = html.find('objeto')
-        marca_inicial_nombre = html.find('>',inicio_nombre)
+        marca_inicial_nombre = html.find('3>',inicio_nombre)
         marca_final_nombre = html.find('<',inicio_nombre)
-        nombre_pack = html[marca_inicial_nombre +1:marca_final_nombre]
+        nombre_pack = html[marca_inicial_nombre+2:marca_final_nombre]
         objeto['nombre'] = nombre_pack
         html = html[marca_final_nombre:]
         caracteristicas, html = crear_caracteristicas(html)
