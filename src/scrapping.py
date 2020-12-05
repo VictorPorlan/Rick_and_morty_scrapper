@@ -20,6 +20,8 @@ def crear_caracteristicas(html):
                 html= html[final_caracteristica:]
                 final_caracteristicas = html.find('final')
                 inicio_caracteristica = html.find('caracteristica')
+        html = html[final_caracteristicas+1:]
+        print(html)
         return listado, html
 
 
@@ -58,15 +60,12 @@ def crear_paquetes(html):
         final_caracteristicas = html.find('final')
         pack['objetos']=[objeto]
         while final_pack > final_caracteristicas:
-                final_caracteristicas = html.find('final')
-                final_pack = html.find('cerrar')
                 objeto, html = crear_objeto(html)
                 pack['objetos'].append(objeto)
-                html=html[final_caracteristicas:]
-                print(html)
                 final_caracteristicas = html.find('final')
                 final_pack = html.find('cerrar')
-                break
+                print ( final_pack, final_caracteristicas)
+                print (html)
         return pack
 
 print (crear_paquetes(html_link))
