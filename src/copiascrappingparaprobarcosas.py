@@ -16,6 +16,6 @@ def crear_caracteristicas(html):
         if caracteristica_añadir== True:
             carcteriticas_dicc[nombre] = marca
         return caracteristicas_dicc
-        print (crear_caracteristicas(html_link))
+print (crear_caracteristicas(html_link))
 
     
