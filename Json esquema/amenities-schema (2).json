@@ -1,0 +1,188 @@
+{
+    "title": "Amenities",
+    "description": "Amenities Project DAW DUAL",
+    "default": {},
+    "examples": [{
+        "id": 1,
+        "bag_type": "premium",
+        "name": "Morty's Style",
+        "dimensions": {
+            "width": 5,
+            "height": 10
+        },
+        "contents": {
+            "quantity": 2,
+            "flying_party_hat": {
+                "color": "blue",
+                "quantity": 1,
+                "materials": "gold"
+            },
+            "teleporter_pill": {
+                "quantity": 3,
+                "quality": "premium"
+            }
+        }
+    }],
+    "required": [
+        "id",
+        "bag_type",
+        "dimensions",
+        "contents"
+    ],
+    "properties": {
+        "id": {
+            "$id": "#/properties/id",
+            "type": "integer",
+            "title": "The id schema",
+            "description": "Identificator for the bag",
+            "default": 0,
+            "examples": [
+                1
+            ]
+        },
+        "bag_type": {
+            "$id": "#/properties/bag_type",
+            "type": "string",
+            "title": "The bag_type schema",
+            "description": "Bag type, from super good, to trash, as desired",
+            "default": "",
+            "examples": [
+                "premium",
+                "i_don't_like_u_bag"
+            ]
+        },
+        "name": {
+            "$id": "#/properties/name",
+            "type": "string",
+            "title": "The name schema",
+            "description": "Name you want to give to the bag",
+            "default": "none",
+            "examples": [
+                "Morty's Style"
+            ]
+        },
+        "dimensions": {
+            "$id": "#/properties/dimensions",
+            "type": "object",
+            "title": "The dimensions schema",
+            "description": "Every type of bag has to be the same size.",
+            "default": {},
+            "examples": [{
+                "width": 5,
+                "height": 10
+            }],
+            "required": [
+                "width",
+                "height"
+            ],
+            "properties": {
+                "width": {
+                    "$id": "#/properties/dimensions/properties/width",
+                    "type": "integer",
+                    "title": "The width schema",
+                    "description": "width, anchura.",
+                    "default": 0,
+                    "examples": [
+                        5
+                    ]
+                },
+                "height": {
+                    "$id": "#/properties/dimensions/properties/height",
+                    "type": "integer",
+                    "title": "The height schema",
+                    "description": "height, altura.",
+                    "default": 0,
+                    "examples": [
+                        10
+                    ]
+                }
+            },
+            "additionalProperties": true
+        },
+        "contents": {
+            "$id": "#/properties/contents",
+            "type": "object",
+            "title": "The contents schema",
+            "description": "Contents of the bag.",
+            "default": {},
+            "examples": [{
+                "quantity": 2,
+                "flying_party_hat": {
+                    "color": "blue",
+                    "quantity": 1,
+                    "materials": "gold"
+                },
+                "teleporter_pill": {
+                    "quantity": 3,
+                    "quality": "premium"
+                }
+            }],
+            "required": [
+                "quantity",
+                "an_item"
+            ],
+            "properties": {
+                "quantity": {
+                    "$id": "#/properties/contents/properties/quantity",
+                    "type": "integer",
+                    "title": "The quantity schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 1,
+                    "examples": [
+                        2
+                    ]
+                },
+                "item": {
+                    "$id": "#/properties/contents/properties/Item",
+                    "type": "object",
+                    "title": "Item schema",
+                    "description": "An item of your choice",
+                    "default": {},
+                    "examples": [{
+                        "color": "blue",
+                        "quantity": 1,
+                        "materials": "gold"
+                    }],
+                    "required": [
+                        "none"
+                    ],
+                    "properties": {
+                        "color": {
+                            "$id": "#/properties/contents/properties/item/properties/color",
+                            "type": "string",
+                            "title": "The color schema",
+                            "description": "Color.",
+                            "default": "",
+                            "examples": [
+                                "blue"
+                            ]
+                        },
+                        "quantity": {
+                            "$id": "#/properties/contents/properties/item/properties/quantity",
+                            "type": "integer",
+                            "title": "The quantity schema",
+                            "description": "Quantity.",
+                            "default": 1,
+                            "examples": [
+                                1
+                            ]
+                        },
+                        "materials": {
+                            "$id": "#/properties/contents/properties/item/properties/materials",
+                            "type": "string",
+                            "title": "The materials schema",
+                            "description": "Material made of.",
+                            "default": "",
+                            "examples": [
+                                "gold"
+                            ]
+                        }
+                    },
+                    "additionalProperties": true
+                }
+            },
+            "additionalProperties": true
+        }
+    },
+    "additionalProperties": true
+}
