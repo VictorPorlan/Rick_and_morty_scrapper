@@ -35,5 +35,4 @@ def crear_paquetes(html):
                 pack['objetos'].append(objeto)
                 final_caracteristicas = html.find('section')
                 final_pack = html.find('/div')
-        return pack, html
-print (crear_paquetes(html_link))
+        return pack,html
