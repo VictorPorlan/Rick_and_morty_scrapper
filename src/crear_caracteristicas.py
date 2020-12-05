@@ -1,7 +1,8 @@
 from urllib.request import urlopen
-from crawling import conseguir_links
-def bucle_crawler():
-        for link in conseguir_links('https://bertavr.github.io/Proyecto_Rick_y_Morty/index.html'):
+from crawling import conseguir_links, localizar_links
+
+def bucle_crawler(pagina):
+        for link in conseguir_links(pagina):
                 page = urlopen(link)
                 html_bytes = page.read()
                 html = html_bytes.decode("utf-8")
@@ -22,4 +23,4 @@ def bucle_crawler():
                         html = html[final_caracteristicas+3:]
                         return listado, html
         return crear_caracteristicas()
-        print bucle_crawler()
+        print (bucle_crawler('https://bertavr.github.io/Proyecto_Rick_y_Morty/index.html'))
