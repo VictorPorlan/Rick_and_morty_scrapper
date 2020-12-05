@@ -28,15 +28,11 @@ def crear_paquetes(html):
         pack['dimensiones'] = {'altura':altura, 'ancho':ancho}
         
         html = html[marca_final_ancho:]
-        objeto, html = crear_objeto(html)
         carac, html, nombre_pack = crear_objeto(html)
         final_pack = html.find('/div')
         final_caracteristicas = html.find('section')
-        pack['objetos']=[objeto]
         pack[nombre_pack]=carac
         while final_pack > final_caracteristicas:
-                objeto, html = crear_objeto(html)
-                pack['objetos'].append(objeto)
                 carac, html, nombre_pack = crear_objeto(html)
                 pack[nombre_pack] = carac
                 final_caracteristicas = html.find('section')
