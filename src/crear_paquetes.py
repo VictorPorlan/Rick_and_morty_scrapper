@@ -32,16 +32,19 @@ def crear_paquetes(html):
         pack['dimensiones'] = {'altura':altura, 'ancho':ancho}
         
         html = html[marca_final_ancho:]
+        contenidos = {}
         carac, html, nombre_pack = crear_objeto(html)
+        contenidos[nombre_pack] = carac
         final_pack = html.find('/div')
         final_caracteristicas = html.find('section')
-        pack[nombre_pack]=carac
         while final_pack > final_caracteristicas:
                 carac, html, nombre_pack = crear_objeto(html)
-                pack[nombre_pack] = carac
+                contenidos[nombre_pack] = carac
                 final_caracteristicas = html.find('section')
                 final_pack = html.find('/div')
                 if final_caracteristicas == -1:
                         break
+        pack['contenidos'] = contenidos
+        
         collection.insert_one(pack)
         return pack,html
