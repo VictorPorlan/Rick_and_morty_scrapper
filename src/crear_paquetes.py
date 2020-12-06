@@ -12,7 +12,13 @@ def crear_paquetes(html):
         marca_final_nombre = html.find('<', marca_inicial_nombre)
         nombre = html[marca_inicial_nombre+1:marca_final_nombre]
 
-        pack['name'] = nombre
+        pack['Nombre pack'] = nombre
+        html = html[marca_final_nombre:]
+        inicio_calidad = html.find("'calidad'")
+        marca_inicial_calidad= html.find('>',inicio_calidad)
+        marca_final_calidad= html.find('<',marca_inicial_calidad)
+        calidad = html[marca_inicial_calidad+1:marca_final_calidad]
+        pack['calidad'] = calidad
 
         inicio_dimensiones = html.find('altura')
         marca_inicial_altura = html.find(':',inicio_dimensiones)

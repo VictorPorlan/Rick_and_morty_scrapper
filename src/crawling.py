@@ -27,7 +27,6 @@ def conseguir_links(html):
     
     assert isinstance(links, list)
     assert len(links) == html.count('https')
-print(conseguir_links(html_index))
             
         
         
