@@ -12,22 +12,14 @@ def sacar_html(index):
 
 
 def conseguir_links(index):
-    codigo_fuente_index = sacar_html(index)
+    html_index = sacar_html(index)
     lista_links = []
-    inicio_menu = codigo_fuente_index.find('ul class="horizontal"')
-    final_menu = codigo_fuente_index.find('>/ul>', inicio_menu)
-    menu = codigo_fuente_index[inicio_menu: final_menu]
-    for texto in menu:
-        marca_izquierda = 'a href='
-        marca_derecha = '<a>'
-        if marca_izquierda
-        inicio_link = menu.find(marca_izquierda) + len(marca_izquierda)
-        final_link = menu.find(marca_derecha)
-        link = menu[inicio_link : final_link]        
+    while html_index.find('a href') != -1:
+        inicio = html_index.find("a href='") + len("a href='")
+        final = html_index.find(">", inicio)
+        link = html_index[inicio:final]
         lista_links.append(link)
+        html_index = html_index[final:]
     return lista_links
-print(conseguir_links("https://bertavr.github.io/Proyecto_Rick_y_Morty/index.html"))
-
-
 if __name__ == "__main__":
-    pass
+    assert conseguir_links(link_index_pagina) == ['https://bertavr.github.io/Proyecto_Rick_y_Morty/index.html', 'https://bertavr.github.io/Proyecto_Rick_y_Morty/premium.html', 'https://bertavr.github.io/Proyecto_Rick_y_Morty/standard.html', 'https://bertavr.github.io/Proyecto_Rick_y_Morty/basic.html']
