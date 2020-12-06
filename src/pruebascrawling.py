@@ -21,6 +21,9 @@ def conseguir_links(index):
         lista_links.append(link)
         html_index = html_index[final_link:]
     return lista_links
-    print(conseguir_links(link_index_pagina))
-if __name__ == "__main__":
-    assert conseguir_links(link_index_pagina) == ['https://bertavr.github.io/Proyecto_Rick_y_Morty/index.html', 'https://bertavr.github.io/Proyecto_Rick_y_Morty/premium.html', 'https://bertavr.github.io/Proyecto_Rick_y_Morty/standard.html', 'https://bertavr.github.io/Proyecto_Rick_y_Morty/basic.html']
+assert isinstance(lista_links, list)
+assert len(lista_links) == html.count('https') #esta aserción se borraría si eventualmente nuestra página tuviera links en otro formato
+
+
+    #if __name__ == "__main__":
+    #assert conseguir_links(link_index_pagina) == ['https://bertavr.github.io/Proyecto_Rick_y_Morty/index.html', 'https://bertavr.github.io/Proyecto_Rick_y_Morty/premium.html', 'https://bertavr.github.io/Proyecto_Rick_y_Morty/standard.html', 'https://bertavr.github.io/Proyecto_Rick_y_Morty/basic.html']
