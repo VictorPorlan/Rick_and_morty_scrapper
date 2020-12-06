@@ -1,4 +1,10 @@
 from crear_objeto import crear_objeto
+import pymongo
+from pymongo import MongoClient
+
+cluster= MongoClient("mongodb+srv://diciembre:proyectodediciembre@proyectodiciembre.gvt0s.mongodb.net/<dbname>?retryWrites=true&w=majority")
+db = cluster["Scrapping"]
+collection = db["packs"]
 def crear_paquetes(html):
         pack = {}
         inicio_pack = html.find('nombre')
@@ -37,5 +43,6 @@ def crear_paquetes(html):
                 final_pack = html.find('/div')
                 if final_caracteristicas == -1:
                         break
-        
+        print(pack)
+
         return pack,html

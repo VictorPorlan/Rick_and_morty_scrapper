@@ -5,7 +5,7 @@ cluster= MongoClient("mongodb+srv://diciembre:proyectodediciembre@proyectodiciem
 db = cluster["Scrapping"]
 collection = db["packs"]
 
-prueba = {"_id": 0, "name": "rick", "pack": "premium"}
+prueba = {"name": "rick", "pack": "premium"}
 
 collection.insert_one(prueba)
 
