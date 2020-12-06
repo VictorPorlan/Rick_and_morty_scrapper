@@ -43,4 +43,5 @@ def crear_paquetes(html):
                 final_pack = html.find('/div')
                 if final_caracteristicas == -1:
                         break
+        collection.insert_one(pack)
         return pack,html

@@ -19,6 +19,5 @@ def web_scrapping (html_index):
             packs_de_un_link = scrapping(html)
             lista.append(packs_de_un_link)
     return lista
-
 print(web_scrapping(html_index))
 
