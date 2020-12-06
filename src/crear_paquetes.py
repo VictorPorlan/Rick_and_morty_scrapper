@@ -1,11 +1,4 @@
-from urllib.request import urlopen
 from crear_objeto import crear_objeto
-import pymongo
-url = "https://bertavr.github.io/Proyecto_Rick_y_Morty/basic.html"
-page = urlopen(url)
-html_bytes = page.read()
-html_link = html_bytes.decode("utf-8")
-
 def crear_paquetes(html):
         pack = {}
         inicio_pack = html.find('nombre')

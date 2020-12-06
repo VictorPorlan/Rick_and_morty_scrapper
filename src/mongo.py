@@ -4,7 +4,7 @@ from bson.json_util import dumps
 from bson.objectid import ObjectId
 from bson.errors import InvalidId
 cluster="mongodb+srv://diciembre:proyectodediciembre@proyectodiciembre.gvt0s.mongodb.net/<dbname>?retryWrites=true&w=majority"
-db cluster["Scrapping"]
+db = cluster["Scrapping"]
 collection = db["packs"]
 
 #user: diciembre
