@@ -19,7 +19,8 @@ def conseguir_links(index):
         final_link = html_index.find(">", inicio_link)
         link = html_index[inicio_link:final_link]
         lista_links.append(link)
-        html_index = html_index[final:]
+        html_index = html_index[final_link:]
     return lista_links
+    print(conseguir_links(link_index_pagina))
 if __name__ == "__main__":
     assert conseguir_links(link_index_pagina) == ['https://bertavr.github.io/Proyecto_Rick_y_Morty/index.html', 'https://bertavr.github.io/Proyecto_Rick_y_Morty/premium.html', 'https://bertavr.github.io/Proyecto_Rick_y_Morty/standard.html', 'https://bertavr.github.io/Proyecto_Rick_y_Morty/basic.html']
