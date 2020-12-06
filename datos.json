@@ -1,0 +1,286 @@
+[{
+  "_id": {
+    "$oid": "5fcd269bf7a581f655c53ed2"
+  },
+  "Nombre pack": "Pack Morty Style ",
+  "calidad": "Premium",
+  "dimensiones": {
+    "altura": "5 cm ",
+    "ancho": "10 cm"
+  },
+  "Gorro de fiesta volador": {
+    "caracteristicas": {
+      "Color": "Azul",
+      "Cantidad": "1",
+      "Material": "Oro"
+    }
+  },
+  "Píldora teletransportadora": {
+    "caracteristicas": {
+      "Cantidad": "3 ",
+      "Calidad": "Premium"
+    }
+  },
+  "Rayo congelador": {
+    "caracteristicas": {
+      " Color": "Blanco",
+      "Cantidad": "1",
+      "Materiales": "Plástico, titanio, alumino."
+    }
+  },
+  "Arma de pepinillo Rick": {
+    "caracteristicas": {
+      " Color": "verde",
+      "Material": "un pepinillo "
+    }
+  }
+},{
+  "_id": {
+    "$oid": "5fcd269cf7a581f655c53ed3"
+  },
+  "Nombre pack": "Pack Rick Style ",
+  "calidad": "Premium",
+  "dimensiones": {
+    "altura": "5 cm ",
+    "ancho": "10 cm"
+  }
+},{
+  "_id": {
+    "$oid": "5fcd269cf7a581f655c53ed4"
+  },
+  "Nombre pack": "Pack para niños",
+  "calidad": "Premium",
+  "dimensiones": {
+    "altura": "5 cm ",
+    "ancho": "10 cm"
+  }
+},{
+  "_id": {
+    "$oid": "5fcd269cf7a581f655c53ed5"
+  },
+  "Nombre pack": "Pack para atronautas",
+  "calidad": "Premium",
+  "dimensiones": {
+    "altura": "5 cm ",
+    "ancho": "10 cm"
+  }
+},{
+  "_id": {
+    "$oid": "5fcd269cf7a581f655c53ed6"
+  },
+  "Nombre pack": "Pack para animalistas",
+  "calidad": "Premium",
+  "dimensiones": {
+    "altura": "5 cm ",
+    "ancho": "10 cm"
+  }
+},{
+  "_id": {
+    "$oid": "5fcd269cf7a581f655c53ed7"
+  },
+  "Nombre pack": "Pack para militares",
+  "calidad": "Premium",
+  "dimensiones": {
+    "altura": "5 cm ",
+    "ancho": "10 cm"
+  },
+  "Arma de pepinillo Rick": {
+    "caracteristicas": {
+      " Color": "verde",
+      "Material": "un pepinillo "
+    }
+  }
+},{
+  "_id": {
+    "$oid": "5fcd269df7a581f655c53ed8"
+  },
+  "Nombre pack": "Pack para viajeros",
+  "calidad": "Premium",
+  "dimensiones": {
+    "altura": "5 cm ",
+    "ancho": "10 cm"
+  },
+  "Píldora teletransportadora": {
+    "caracteristicas": {
+      "Cantidad": "3 ",
+      "Calidad": "Premium"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "5fcd269df7a581f655c53ed9"
+  },
+  "Nombre pack": "Pack diversión",
+  "calidad": "Premium",
+  "dimensiones": {
+    "altura": "5 cm ",
+    "ancho": "10 cm"
+  },
+  "Gorro de fiesta volador": {
+    "caracteristicas": {
+      "Color": "Azul",
+      "Cantidad": "1",
+      "Material": "Oro"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "5fcd269df7a581f655c53eda"
+  },
+  "Nombre pack": "Pack Meeseek ",
+  "calidad": "Standard",
+  "dimensiones": {
+    "altura": "4 cm ",
+    "ancho": "8 cm"
+  }
+},{
+  "_id": {
+    "$oid": "5fcd269df7a581f655c53edb"
+  },
+  "Nombre pack": "Pack Microscopico ",
+  "calidad": "Standard",
+  "dimensiones": {
+    "altura": "4 cm ",
+    "ancho": "8 cm"
+  }
+},{
+  "_id": {
+    "$oid": "5fcd269df7a581f655c53edc"
+  },
+  "Nombre pack": "Pack Covid",
+  "calidad": "Standard",
+  "dimensiones": {
+    "altura": "4 cm ",
+    "ancho": "8 cm"
+  }
+},{
+  "_id": {
+    "$oid": "5fcd269df7a581f655c53edd"
+  },
+  "Nombre pack": "Pack Guerra Galáctica",
+  "calidad": "Standard",
+  "dimensiones": {
+    "altura": "4 cm ",
+    "ancho": "8 cm"
+  }
+},{
+  "_id": {
+    "$oid": "5fcd269df7a581f655c53ede"
+  },
+  "Nombre pack": "Pack Terricola",
+  "calidad": "Standard",
+  "dimensiones": {
+    "altura": "4 cm ",
+    "ancho": "8 cm"
+  }
+},{
+  "_id": {
+    "$oid": "5fcd269df7a581f655c53edf"
+  },
+  "Nombre pack": "Pack Informatico ",
+  "calidad": "Standard",
+  "dimensiones": {
+    "altura": "4 cm ",
+    "ancho": "8 cm"
+  }
+},{
+  "_id": {
+    "$oid": "5fcd269ef7a581f655c53ee0"
+  },
+  "Nombre pack": "Pack AdultSwim",
+  "calidad": "Standard",
+  "dimensiones": {
+    "altura": "4 cm ",
+    "ancho": "8 cm"
+  }
+},{
+  "_id": {
+    "$oid": "5fcd269ef7a581f655c53ee1"
+  },
+  "Nombre pack": "Pack PickleRick",
+  "calidad": "Standard",
+  "dimensiones": {
+    "altura": "4 cm ",
+    "ancho": "8 cm"
+  }
+},{
+  "_id": {
+    "$oid": "5fcd269ef7a581f655c53ee2"
+  },
+  "Nombre pack": "Pack Squanchy Style",
+  "calidad": "Basic",
+  "dimensiones": {
+    "altura": "3 cm",
+    "ancho": "6 cm"
+  }
+},{
+  "_id": {
+    "$oid": "5fcd269ef7a581f655c53ee3"
+  },
+  "Nombre pack": "Pack para gangsters",
+  "calidad": "Basic",
+  "dimensiones": {
+    "altura": "3 cm ",
+    "ancho": "6 cm"
+  }
+},{
+  "_id": {
+    "$oid": "5fcd269ef7a581f655c53ee4"
+  },
+  "Nombre pack": "Pack Donald Trump",
+  "calidad": "Basic",
+  "dimensiones": {
+    "altura": "3 cm ",
+    "ancho": "6 cm"
+  }
+},{
+  "_id": {
+    "$oid": "5fcd269ef7a581f655c53ee5"
+  },
+  "Nombre pack": "Pack piscina",
+  "calidad": "Basic",
+  "dimensiones": {
+    "altura": "3 cm ",
+    "ancho": "6 cm"
+  }
+},{
+  "_id": {
+    "$oid": "5fcd269ef7a581f655c53ee6"
+  },
+  "Nombre pack": "Pack brujas",
+  "calidad": "Basic",
+  "dimensiones": {
+    "altura": "3 cm ",
+    "ancho": "6 cm"
+  }
+},{
+  "_id": {
+    "$oid": "5fcd269ef7a581f655c53ee7"
+  },
+  "Nombre pack": "Pack para maquilladores",
+  "calidad": "Basic",
+  "dimensiones": {
+    "altura": "3 cm ",
+    "ancho": "6 cm"
+  }
+},{
+  "_id": {
+    "$oid": "5fcd269ff7a581f655c53ee8"
+  },
+  "Nombre pack": "Pack para niño low-cost",
+  "calidad": "Basic",
+  "dimensiones": {
+    "altura": "3 cm ",
+    "ancho": "6 cm"
+  }
+},{
+  "_id": {
+    "$oid": "5fcd269ff7a581f655c53ee9"
+  },
+  "Nombre pack": "Pack para Payasos",
+  "calidad": "Basic",
+  "dimensiones": {
+    "altura": "3 cm ",
+    "ancho": "6 cm"
+  }
+}]
