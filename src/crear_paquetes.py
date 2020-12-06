@@ -14,7 +14,7 @@ def crear_paquetes(html):
 
         pack['Nombre pack'] = nombre
         html = html[marca_final_nombre:]
-        inicio_calidad = html.find("'calidad'")
+        inicio_calidad = html.find("calidad")
         marca_inicial_calidad= html.find('>',inicio_calidad)
         marca_final_calidad= html.find('<',marca_inicial_calidad)
         calidad = html[marca_inicial_calidad+1:marca_final_calidad]
@@ -43,5 +43,4 @@ def crear_paquetes(html):
                 final_pack = html.find('/div')
                 if final_caracteristicas == -1:
                         break
-        collection.insert_one(pack)
         return pack,html
