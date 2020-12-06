@@ -1,5 +1,6 @@
 from urllib.request import urlopen
 from crear_objeto import crear_objeto
+import pymongo
 url = "https://bertavr.github.io/Proyecto_Rick_y_Morty/basic.html"
 page = urlopen(url)
 html_bytes = page.read()
@@ -43,4 +44,5 @@ def crear_paquetes(html):
                 final_pack = html.find('/div')
                 if final_caracteristicas == -1:
                         break
+        
         return pack,html
