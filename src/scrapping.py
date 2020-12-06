@@ -13,4 +13,3 @@ def scrapping (html):
         paquetes.append(pack)
         nombre = html.find('nombre')
     return paquetes
-print(scrapping(html_link))
