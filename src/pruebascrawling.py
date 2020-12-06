@@ -17,9 +17,9 @@ def conseguir_links(index):
     while html_index.find('a href') != -1:
         inicio_link = html_index.find("a href='") + len("a href='")
         final_link = html_index.find("'>", inicio_link)
-        link = html_index[inicio_link:final_link]
+        link = html_index[inicio_link : final_link]
         lista_links.append(link)
-        html_index = html_index[final_link:]
+        html_index = html_index[final_link : ]
     return lista_links
 
 

@@ -8,11 +8,11 @@ html_link = html_bytes.decode("utf-8")
 
 def crear_paquetes(html):
         pack = {}
-        inicio_pack = html.find('nombre') + len
+        inicio_pack = html.find('nombre') + len('nombre')
         marca_inicial_nombre = html.find('>', inicio_pack)
         marca_final_nombre = html.find('<', marca_inicial_nombre)
         nombre = html[marca_inicial_nombre+1:marca_final_nombre]
-
+        return pack
         pack['Nombre pack'] = nombre
         html = html[marca_final_nombre:]
         inicio_calidad = html.find("'calidad'")
