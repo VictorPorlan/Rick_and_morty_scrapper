@@ -2,7 +2,7 @@ import pymongo
 from bson.json_util import dumps
 from bson.objectid import ObjectId
 from bson.errors import InvalidId
-uri="mongodb+srv://proyectodiciembre.gvt0s.mongodb.net/<dbname>"
+uri="mongodb+srv://diciembre:proyectodediciembre@proyectodiciembre.gvt0s.mongodb.net/<dbname>?retryWrites=true&w=majority"
 #user: diciembre
 #password: proyectodediciembre
 client= pymongo.MongoClient(uri)
