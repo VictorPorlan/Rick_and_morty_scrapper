@@ -1,12 +1,12 @@
 from crear_caracteristicas import crear_caracteristicas
 
 def crear_objeto(html):
-        dicc_caract = {}
+        carac = {}
         inicio_nombre = html.find('objeto')
-        inicio_nombre = html.find('h3>',inicio_nombre) + len('h3>')
-        marca_final_nombre = html.find('<',inicio_nombre)
-        nombre_pack = html[inicio_nombre : marca_final_nombre]
-        html = html[marca_final_nombre: ]
+        marca_inicial_nombre = html.find('3>',inicio_nombre)
+        marca_final_nombre = html.find('<',marca_inicial_nombre)
+        nombre_pack = html[marca_inicial_nombre+2:marca_final_nombre]
+        html = html[marca_final_nombre:]
         caracteristicas, html = crear_caracteristicas(html)
-        dicc_caract['caracteristicas'] = caracteristicas
-        return dicc_carac, html, nombre_pack
+        carac['caracteristicas'] = caracteristicas
+        return carac, html, nombre_pack
