@@ -1,9 +1,11 @@
 from urllib.request import urlopen
-url = "https://bertavr.github.io/Proyecto_Rick_y_Morty/index.html"
-page = urlopen(url)
-html_bytes = page.read()
-html_index = html_bytes.decode("utf-8")
-assert isinstance(html_index, str)
+seed= 'https://bertavr.github.io/Proyecto_Rick_y_Morty/index.html'
+def convertir_string(link):
+    page = urlopen(link)
+    html_bytes = page.read()
+    html = html_bytes.decode("utf-8")
+    return html
+    assert isinstance(html, str)
 
 def localizar_links(html_index):
     start_link= html_index.find('a href=')
@@ -21,11 +23,17 @@ def conseguir_links(html):
             html=html[endpos:]
         else:
             break
-    return links  
-    
-    assert isinstance(links, list)
-    assert len(links) == html.count('https')
-            
+    return links
+def crawl_web (seed):
+    tocrawl =[seed]
+    crawled =[]
+    while tocrawl:
+        page = tocrawl.pop()
+        if page not in crawled:
+            tocrawl, conseguir_links(convertir_string(page))
+            crawled.append(page)
+    return crawled,
+print(crawl_web(seed))
         
         
             
