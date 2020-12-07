@@ -14,6 +14,12 @@ def localizar_links(html_index):
     url = html_index[start_quote+1 : end_quote]
     return url, end_quote
 
+def por_crawlear(tocrawl, links):
+    for link in links:
+        if link not in tocrawl:
+            tocrawl.append(link)
+    return tocrawl
+
 def conseguir_links(html):
     links = []
     while True:
@@ -30,9 +36,9 @@ def crawl_web (seed):
     while tocrawl:
         page = tocrawl.pop()
         if page not in crawled:
-            tocrawl, conseguir_links(convertir_string(page))
+            tocrawl = por_crawlear(tocrawl, conseguir_links(convertir_string(page)))
             crawled.append(page)
-    return crawled,
+    return crawled
 print(crawl_web(seed))
         
         
