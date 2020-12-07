@@ -11,18 +11,19 @@ def sacar_html(index):
     return html_index
 
 
-def conseguir_links(index):
+def conseguir_links(pagina):
 #esto es el crawler
-    html_index = sacar_html(index)
-    lista_links = []
-    while html_index.find('a href') != -1: #el while comprueba que haya a href (ya que al final del bucle corto el html)
-        inicio_link = html_index.find("a href='") + len("a href='")  #busca la posición de después de a href=' 
-        final_link = html_index.find("'>", inicio_link)  #busca la posición donde acaba el link ('>)
-        link = html_index[inicio_link : final_link] #saca el códifo desde la posición de después del a href hasta la posicion del('>) o sea el link
-        lista_links.append(link) 
-        html_index = html_index[final_link : ] #corta el html como habías hecho tú
+    lista_links = [pagina]
+    for link in lista_links:
+        html_link = sacar_html(pagina)
+        while html_link.find('a href') != -1: #el while comprueba que haya a href (ya que al final del bucle corto el html)
+            inicio_link = html_link.find("a href=") + len("a href=") + 1 #busca la posición de después de a href=' 
+            final_link = html_link.find("'>", inicio_link)  #busca la posición donde acaba el link ('>)
+            link = html_link[inicio_link : final_link] #saca el códifo desde la posición de después del a href hasta la posicion del('>) o sea el link
+            if link not in lista_links: #este if se asegura de que no haya items repetidos
+                lista_links.append(link) 
+            html_link = html_link[final_link : ] #corta el html como habías hecho tú
     assert isinstance(lista_links, list)
-    assert len(lista_links) == sacar_html(index).count('https') ###esta aserción habría que quitarla o refactorizarla si eventualmente se añadieran urls con otro formato (caso hipotético)
     return lista_links
 
     print (conseguir_links(link_index_pagina)) #print que hay que quitar#
