@@ -49,9 +49,13 @@ def links_todo(pagina_raiz):
     crawleadas = []
     while por_crawlear:
         pagina = por_crawlear.pop()
-        if pagina not in crawled:
+        if pagina not in crawleadas:
             unir_lista(por_crawlear, links_una_pagina(sacar_html(pagina))
             crawleadas.append(pagina)
     return crawleadas
     print links_todo(link_index_pagina)
             
+
+
+if __name__ == "__main__": 
+    assert conseguir_links(link_index_pagina) == ['https://bertavr.github.io/Proyecto_Rick_y_Morty/premium.html', 'https://bertavr.github.io/Proyecto_Rick_y_Morty/standard.html', 'https://bertavr.github.io/Proyecto_Rick_y_Morty/basic.html']
