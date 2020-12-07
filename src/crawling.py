@@ -25,10 +25,6 @@ def localizar_links(html_index):
     url = html_index[start_quote+1 : end_quote]
     return url, end_quote
 
-def unir_lista(por_crawlear , links_pagina_nueva):
-    for elemento in links_pagina_nueva:
-        if elemento not in por_crawlear:
-            por_crawlear.append(elemento)
 
 def links_una_pagina(html):
     links = []
@@ -59,3 +55,16 @@ def links_todo(pagina_raiz):
             
 
 
+def sacar_html_todo(index): #esto es el bucle links
+    lista_links =  link_todo(index)
+    lista_codigos_fuente = []
+    for enlace in lista_links:
+        lista_codigos_fuente.append(sacar_html(enlace))
+    assert len(lista_codigos_fuente) == len(links_todo(index))
+    return  lista_codigos_fuente
+print (crawl_conseguir_html(link_index_pagina)) #print que hay que quitar#
+
+
+
+if __name__ == "__main__": 
+    assert conseguir_links(link_index_pagina) == ['https://bertavr.github.io/Proyecto_Rick_y_Morty/premium.html', 'https://bertavr.github.io/Proyecto_Rick_y_Morty/standard.html', 'https://bertavr.github.io/Proyecto_Rick_y_Morty/basic.html']
