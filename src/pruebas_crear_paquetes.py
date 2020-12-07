@@ -1,48 +1,55 @@
 from urllib.request import urlopen
+from pruebascrawling import crawl_conseguir_html, lista_codigos_fuente, link_index_pagina
 from crear_objeto import crear_objeto
-import pymongo
 url = "https://bertavr.github.io/Proyecto_Rick_y_Morty/basic.html"
 page = urlopen(url)
 html_bytes = page.read()
 html_link = html_bytes.decode("utf-8")
-
-def crear_paquetes(html):
-        pack = {}
-        inicio_pack = html.find('nombre') + len('nombre')
-        marca_inicial_nombre = html.find('>', inicio_pack)
-        marca_final_nombre = html.find('<', marca_inicial_nombre)
-        nombre = html[marca_inicial_nombre+1:marca_final_nombre]
+pack = {}
+def nombre_packs(html):  
+        while html.find('class="nombre">') != -1:
+                inicio_nombre_pack = html.find('class="nombre">') + len('class="nombre">')
+                final_nombre_pack = html.find('<', inicio_nombre_pack)
+                nombre = html[inicio_nombre_pack:final_nombre_pack]
+                pack['Nombre pack'] = nombre
+                html = html[final_nombre_pack : ]
         return pack
-        pack['Nombre pack'] = nombre
-        html = html[marca_final_nombre:]
-        inicio_calidad = html.find("'calidad'")
-        marca_inicial_calidad= html.find('>',inicio_calidad)
-        marca_final_calidad= html.find('<',marca_inicial_calidad)
-        calidad = html[marca_inicial_calidad+1:marca_final_calidad]
-        pack['calidad'] = calidad
 
-        inicio_dimensiones = html.find('altura')
-        marca_inicial_altura = html.find(':',inicio_dimensiones)
-        marca_final_altura = html.find('<',inicio_dimensiones)
-        altura = html[marca_inicial_altura+2 : marca_final_altura]
-        inicio_ancho = html.find('ancho')
-        marca_inicial_ancho = html.find(':',inicio_ancho)
-        marca_final_ancho = html.find('<',inicio_ancho)
-        ancho = html[marca_inicial_ancho+2 : marca_final_ancho]
 
-        pack['dimensiones'] = {'altura':altura, 'ancho':ancho}
-        
-        html = html[marca_final_ancho:]
-        carac, html, nombre_pack = crear_objeto(html)
-        final_pack = html.find('/div')
-        final_caracteristicas = html.find('section')
-        pack[nombre_pack]=carac
-        while final_pack > final_caracteristicas:
+
+
+def calidad_packs(html):
+        html.split('/div')
+        for pack in html:
+                inicio_calidad = html.find("'calidad>'") + len("'calidad'")
+                final_calidad= html.find('<', inicio_calidad)
+                calidad = html[inicio_calidad : final_calidad]
+                pack['calidad'] = calidad
+        return pack 
+        print(calidad_packs(crawl_conseguir_html(link_index_pagina)))
+def dimensiones_packs(html):
+        html.lower()
+        while html.find('ancho:') != -1:
+                inicio_altura= html.find('altura:') + len('altura:')
+                final_altura = html.find('<',inicio_altura)
+                altura = html[inicio_altura :final_altura]
+                inicio_ancho = html.find('ancho:') + len('ancho:')
+                final_ancho = html.find('<',inicio_ancho)
+                ancho = html[inicio_ancho : final_ancho]
+                pack['dimensiones'] = {'altura':altura, 'ancho':ancho}
+                html = html[final_ancho : ]
+        return pack
+def pack_y_objetos_integrar():
                 carac, html, nombre_pack = crear_objeto(html)
-                pack[nombre_pack] = carac
-                final_caracteristicas = html.find('section')
                 final_pack = html.find('/div')
-                if final_caracteristicas == -1:
-                        break
-        
+                final_caracteristicas = html.find('section')
+                pack[nombre_pack]=carac
+                while final_pack > final_caracteristicas:
+                        carac, html, nombre_pack = crear_objeto(html)
+                        pack[nombre_pack] = carac
+                        final_caracteristicas = html.find('section')
+                        final_pack = html.find('')
+                        if final_caracteristicas == -1:
+                                break
+                
         return pack,html
