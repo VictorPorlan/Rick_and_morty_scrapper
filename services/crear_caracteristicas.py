@@ -1,9 +1,3 @@
-from urllib.request import urlopen
-url = "https://bertavr.github.io/Proyecto_Rick_y_Morty/basic.html"
-page = urlopen(url)
-html_bytes = page.read()
-html_link = html_bytes.decode("utf-8")
-
 def crear_caracteristicas(html):
         listado = {}
         final_caracteristicas = html.find('/section')
