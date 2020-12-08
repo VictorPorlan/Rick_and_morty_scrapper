@@ -12,4 +12,3 @@ def crear_contenidos(html):
             break
     return contenidos, html
         
-        
