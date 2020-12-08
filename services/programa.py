@@ -1,5 +1,5 @@
-from crawl_web import crawl_web
-from todos_paquetes_link import todos_paquetes_link
+from services.crawl_web import crawl_web
+from services.todos_paquetes_link import todos_paquetes_link
 from urllib.request import urlopen
 link = "https://bertavr.github.io/Proyecto_Rick_y_Morty/index.html"
 

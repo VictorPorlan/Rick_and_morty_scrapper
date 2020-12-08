@@ -1,5 +1,5 @@
-from conseguir_links import conseguir_links
-from convertir_string import convertir_string
+from services.conseguir_links import conseguir_links
+from services.convertir_string import convertir_string
 def crawl_web (seed):
     tocrawl =[seed]
     crawled =[]

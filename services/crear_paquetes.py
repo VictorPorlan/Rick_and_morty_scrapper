@@ -1,10 +1,10 @@
-from crear_nombre import crear_nombre
-from crear_calidad import crear_calidad
-from crear_precio import crear_precio
-from crear_stock import crear_stock
-from crear_dimensiones import crear_dimensiones
-from crear_contenidos import crear_contenidos
-from crear_objeto import crear_objeto
+from services.crear_nombre import crear_nombre
+from services.crear_calidad import crear_calidad
+from services.crear_precio import crear_precio
+from services.crear_stock import crear_stock
+from services.crear_dimensiones import crear_dimensiones
+from services.crear_contenidos import crear_contenidos
+from services.crear_objeto import crear_objeto
 import pymongo
 from pymongo import MongoClient
 

@@ -1,4 +1,4 @@
-from crear_caracteristicas import crear_caracteristicas
+from services.crear_caracteristicas import crear_caracteristicas
 
 def crear_objeto(html):
         carac = {}
