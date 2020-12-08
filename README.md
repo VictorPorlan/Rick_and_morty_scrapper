@@ -14,16 +14,16 @@ $ mkdir ./fiestaRick
 $ cd fiestaRick
 ```
 - Una vez creado el directorio donde quieres almacenar el proyecto, clona el repositiorio.
-`$ git clone https://github.com/BertaVR/Proyecto_Rick_y_Morty.git`
+    `$ git clone https://github.com/BertaVR/Proyecto_Rick_y_Morty.git`
 - Después de haber clonado el proyecto, es el momento de crear el entorno virtyal e inicializarlo.
-`$ python3.6 -m venv venv`
-`$ source venv/bin/activate`
+    `$ python3.6 -m venv venv`
+    `$ source venv/bin/activate`
 - Como último paso antes de poder lanzar el proyecto, hay que instalar las dependencias del fichero requirements.txt 
-`$ pip install -r requirements.txt`
+    `$ pip install -r requirements.txt`
 - Para lanzar el archivo python lo puedes lanzar desde consola indicando la ruta ( recuerda que la ruta será la ruta donde has creado el directorio seguida de `/fiestaRick/Proyecto_Rick_Y_Morty/services/app.py`)
- `$ python3 <ruta del fichero>/app.py`
+    `$ python3 <ruta del fichero>/app.py`
 
-  Alternativamente, puedes ejecutar el fichero app.py (el cual se encuentra dentro del directorio services) desde un IDE. 
+Alternativamente, puedes ejecutar el fichero app.py (el cual se encuentra dentro del directorio services) desde un IDE. 
 
 Para visualizar nuestro sitio web, este es el enlace: [página principal venta de amenities](https://bertavr.github.io/Proyecto_Rick_y_Morty/index.html).
 
