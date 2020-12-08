@@ -9,8 +9,10 @@ Para el presente proyecto hemos creado un sitio web (usando html y css) de venta
 - Para ello es conveniente que instales venv (para entornos virtuales) antes de clonar el proyecto.
 `$ sudo apt-get install python3.6-venv`
 - Después crea un directorio y sitúate en él.
-`$ mkdir ./fiestaRick`
-`$ cd fiestaRick`
+```bash
+$ mkdir ./fiestaRick
+$ cd fiestaRick
+```
 - Una vez creado el directorio donde quieres almacenar el proyecto, clona el repositiorio.
 `$ git clone https://github.com/BertaVR/Proyecto_Rick_y_Morty.git`
 - Después de haber clonado el proyecto, es el momento de crear el entorno virtyal e inicializarlo.
