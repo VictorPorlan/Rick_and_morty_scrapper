@@ -8,11 +8,6 @@
     src: url("..\..\Tipografia\get_schwifty.ttf") format("ttf");
 }
 
-@font-face {
-    font-family: "Shlop";
-    src: url("..\..\Tipografia\pepinillo.ttf") format("ttf");
-}
-
 body {
     margin-right: 20%;
     margin-left: 20%;
