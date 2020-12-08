@@ -1,0 +1,8 @@
+import pytest
+from src.conseguir_links import conseguir_links
+def test_conseguir_links():
+    assert conseguir_links('https://sci-hub.se/') == []
+    assert conseguir_links('https://bertavr.github.io/Proyecto_Rick_y_Morty/index.html') == ['https://bertavr.github.io/Proyecto_Rick_y_Morty/premium.html', 'https://bertavr.github.io/Proyecto_Rick_y_Morty/standard.html', 'https://bertavr.github.io/Proyecto_Rick_y_Morty/basic.html']
+    assert conseguir_links('https://bertavr.github.io/Proyecto_Rick_y_Morty/basic.html') == ['https://bertavr.github.io/Proyecto_Rick_y_Morty/index.html', 'https://bertavr.github.io/Proyecto_Rick_y_Morty/premium.html', 'https://bertavr.github.io/Proyecto_Rick_y_Morty/standard.html', 'https://bertavr.github.io/Proyecto_Rick_y_Morty/basic.html']
+    assert conseguir_links('https://bertavr.github.io/Proyecto_Rick_y_Morty/premium.html') == ['https://bertavr.github.io/Proyecto_Rick_y_Morty/index.html', 'https://bertavr.github.io/Proyecto_Rick_y_Morty/premium.html', 'https://bertavr.github.io/Proyecto_Rick_y_Morty/standard.html', 'https://bertavr.github.io/Proyecto_Rick_y_Morty/basic.html']
+    assert conseguir_links('https://bertavr.github.io/Proyecto_Rick_y_Morty/standard.html') == ['https://bertavr.github.io/Proyecto_Rick_y_Morty/index.html', 'https://bertavr.github.io/Proyecto_Rick_y_Morty/premium.html', 'https://bertavr.github.io/Proyecto_Rick_y_Morty/standard.html', 'https://bertavr.github.io/Proyecto_Rick_y_Morty/basic.html']
