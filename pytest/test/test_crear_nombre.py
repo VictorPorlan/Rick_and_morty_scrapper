@@ -1,4 +1,4 @@
-from services.crear_nombre import crear_nombre
+from src.crear_nombre import crear_nombre
 def test_crear_nombre():
     assert crear_nombre("\"nombre\">Hello<") == ('Hello', 14)
     assert crear_nombre("\"nombre\">>Holatest<") == ('>Holatest', 18)

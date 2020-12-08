@@ -1,4 +1,4 @@
-from services.crear_calidad import crear_calidad
+from src.crear_calidad import crear_calidad
 def test_calidad():
     assert crear_calidad("\"patata\">Basic<") == ('"patata">Basic', 14)
     assert crear_calidad("\"calidad\"><") == ('', 10)
