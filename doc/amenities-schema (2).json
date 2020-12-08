@@ -7,8 +7,8 @@
         "bag_type": "premium",
         "name": "Morty's Style",
         "dimensions": {
-            "width": 5,
-            "height": 10
+            "width": "5 cm",
+            "height": "10 cm"
         },
         "contents": {
             "quantity": 2,
@@ -32,7 +32,7 @@
     "properties": {
         "id": {
             "$id": "#/properties/id",
-            "type": "integer",
+            "type": "ObjectID",
             "title": "The id schema",
             "description": "Identificator for the bag",
             "default": 0,
@@ -68,8 +68,8 @@
             "description": "Every type of bag has to be the same size.",
             "default": {},
             "examples": [{
-                "width": 5,
-                "height": 10
+                "width": "10 cm",
+                "height": "10 com"
             }],
             "required": [
                 "width",
@@ -78,22 +78,22 @@
             "properties": {
                 "width": {
                     "$id": "#/properties/dimensions/properties/width",
-                    "type": "integer",
+                    "type": "string",
                     "title": "The width schema",
                     "description": "width, anchura.",
-                    "default": 0,
+                    "default": null,
                     "examples": [
-                        5
+                        "10 cm"
                     ]
                 },
                 "height": {
                     "$id": "#/properties/dimensions/properties/height",
-                    "type": "integer",
+                    "type": "string",
                     "title": "The height schema",
                     "description": "height, altura.",
-                    "default": 0,
+                    "default": null,
                     "examples": [
-                        10
+                        "10 cm"
                     ]
                 }
             },
