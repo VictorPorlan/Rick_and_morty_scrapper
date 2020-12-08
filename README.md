@@ -1,5 +1,5 @@
 # Proyecto Packs Amenities
-![Alt Text](https://tenor.com/view/rick-and-morty-rickandmorty-excited-gif-4750015)
+![Alt Text](https://media1.tenor.com/images/41d4482a7391e4ced853f5cdb83be9cd/tenor.gif?itemid=4750015)
 ## Explicación
 Este proyecto consiste en crear una página web (usando html y css) de venta de paquetes de bienvenida con temática de Rick y Morty. Luego de crearla tenemos que desarrollar un programa en python que sea capaz de scrappear toda la información de los paquetes, la metiera en un diccionario y la subirla a una base de datos MongoDB.
 
