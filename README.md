@@ -4,7 +4,8 @@
 Para el presente proyecto hemos creado un sitio web (usando html y css) de venta de paquetes de bienvenida para una fiesta con temática de Rick y Morty. Una vez hecha la página y añadida toda la información, hemos desarrollado un programa en Python 3  capaz de, a partir de una página raíz, extraer todos los enlaces del sitio web (obviando los que están repetidos) mediante un crawler, y scrappear toda la información de los paquetes de bienvenida (esto es, cuál es su precio, qué objetos contienen, etc.) para meterla en un diccionario y la subirla a una base de datos MongoDB en formato Json. Para conseguir todo esto hemos usado librerías como urllib, request o pymongo.
 
 ## Utilización
--Para hacer uso de la aplicación es necesario instalar todas las libreríaas listadas en el archivo requirements.txt. 
+
+Para hacer uso de la aplicación es necesario instalar todas las libreríaas listadas en el archivo requirements.txt. :
 -Para ello es conveniente que instales venv (para entornos virtuales) antes de clonar el proyecto.
 `$ sudo apt-get install python3.6-venv`
 -Después crea un directorio y sitúate en él.
