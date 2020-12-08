@@ -1,4 +1,4 @@
-from crear_objeto import crear_objeto
+from src.crear_objeto import crear_objeto
 def crear_contenidos(html):
     final_pack = html.find('/div')
     final_caracteristicas = html.find('/section')
