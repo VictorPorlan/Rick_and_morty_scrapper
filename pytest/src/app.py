@@ -1,6 +1,6 @@
-from crawl_web import crawl_web
-from todos_paquetes_link import todos_paquetes_link
-from convertir_string import convertir_string
+from src.crawl_web import crawl_web
+from src.todos_paquetes_link import todos_paquetes_link
+from urllib.request import urlopen
 link = "https://bertavr.github.io/Proyecto_Rick_y_Morty/index.html"
 
 def web_scrapping (link):
