@@ -20,7 +20,7 @@ $ cd fiestaRick
     `$ source venv/bin/activate`
 - Como último paso antes de poder lanzar el proyecto, hay que instalar las dependencias del fichero requirements.txt 
     `$ pip install -r requirements.txt`
-- Para lanzar el archivo python lo puedes lanzar desde consola indicando la ruta ( recuerda que la ruta será la ruta donde has creado el directorio seguida de `/fiestaRick/Proyecto_Rick_Y_Morty/services/app.py`)
+- Para lanzar el archivo python lo puedes lanzar desde consola indicando la ruta ( recuerda que la ruta será la ruta donde has creado el directorio seguida de "/fiestaRick/Proyecto_Rick_Y_Morty/services/app.py")
     `$ python3 <ruta del fichero>/app.py`
 
 Alternativamente, puedes ejecutar el fichero app.py (el cual se encuentra dentro del directorio services) desde un IDE. 
