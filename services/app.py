@@ -1,9 +1,15 @@
 from crawl_web import crawl_web
 from todos_paquetes_link import todos_paquetes_link
 from urllib.request import urlopen
-link = "https://bertavr.github.io/Proyecto_Rick_y_Morty/index.html"
+import pymongo
+from pymongo import MongoClient
+cluster= MongoClient("mongodb+srv://diciembre:proyectodediciembre@proyectodiciembre.gvt0s.mongodb.net/<dbname>?retryWrites=true&w=majority")
+db = cluster["Scrapping"]
+collection = db["packs"]
 
+link = "https://bertavr.github.io/Proyecto_Rick_y_Morty/index.html"
 def web_scrapping (link):
+    collection.drop()
     lista = []
     links = crawl_web(link)
     for enlace in links:
