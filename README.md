@@ -5,20 +5,20 @@ Para el presente proyecto hemos creado un sitio web (usando html y css) de venta
 
 ## Utilización
 
-Para hacer uso de la aplicación es necesario instalar todas las libreríaas listadas en el archivo requirements.txt. :
--Para ello es conveniente que instales venv (para entornos virtuales) antes de clonar el proyecto.
+**Para hacer uso de la aplicación es necesario instalar todas las libreríaas listadas en el archivo requirements.txt.:**
+- Para ello es conveniente que instales venv (para entornos virtuales) antes de clonar el proyecto.
 `$ sudo apt-get install python3.6-venv`
--Después crea un directorio y sitúate en él.
+- Después crea un directorio y sitúate en él.
 `$ mkdir ./fiestaRick`
 `$ cd fiestaRick`
--Una vez creado el directorio donde quieres almacenar el proyecto, clona el repositiorio.
+- Una vez creado el directorio donde quieres almacenar el proyecto, clona el repositiorio.
 `$ git clone https://github.com/BertaVR/Proyecto_Rick_y_Morty.git`
--Después de haber clonado el proyecto, es el momento de crear el entorno virtyal e inicializarlo.
+- Después de haber clonado el proyecto, es el momento de crear el entorno virtyal e inicializarlo.
 `$ python3.6 -m venv venv`
 `$ source venv/bin/activate`
--Como último paso antes de poder lanzar el proyecto, hay que instalar las dependencias del fichero requirements.txt 
+- Como último paso antes de poder lanzar el proyecto, hay que instalar las dependencias del fichero requirements.txt 
 `$ pip install -r requirements.txt`
--Para lanzar el archivo python lo puedes lanzar desde consola indicando la ruta ( recuerda que la ruta será la ruta donde has creado el directorio seguida de `/fiestaRick/Proyecto_Rick_Y_Morty/services/app.py`)
+- Para lanzar el archivo python lo puedes lanzar desde consola indicando la ruta ( recuerda que la ruta será la ruta donde has creado el directorio seguida de `/fiestaRick/Proyecto_Rick_Y_Morty/services/app.py`)
  `$ python3 <ruta del fichero>/app.py`
 
   Alternativamente, puedes ejecutar el fichero app.py (el cual se encuentra dentro del directorio services) desde un IDE. 
