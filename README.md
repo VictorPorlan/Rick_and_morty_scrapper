@@ -12,7 +12,7 @@ Para el presente proyecto hemos creado un sitio web (usando html y css) de venta
 `$ cd fiestaRick`
 -Una vez creado el directorio donde quieres almacenar el proyecto, clona el repositiorio.
 `$ git clone https://github.com/BertaVR/Proyecto_Rick_y_Morty.git`
--Después de haber clonado el proyecto es el momento de crear el entorno virtyal e inicializarlo.
+-Después de haber clonado el proyecto, es el momento de crear el entorno virtyal e inicializarlo.
 `$ python3.6 -m venv venv`
 `$ source venv/bin/activate`
 -Como último paso antes de poder lanzar el proyecto, hay que instalar las dependencias del fichero requirements.txt 
