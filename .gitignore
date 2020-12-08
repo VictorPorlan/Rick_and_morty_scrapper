@@ -8,3 +8,5 @@
 pyvenv.cfg
 .venv
 pip-selfcheck.json
+services/__pycache__/crear_calidad.cpython-39.pyc
+test/__pycache__/test_objetos.cpython-39-pytest-6.1.1.pyc
