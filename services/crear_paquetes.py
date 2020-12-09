@@ -29,7 +29,11 @@ def crear_paquetes(html):
         html = html[marca_final_ancho:]
         contenidos, html = crear_contenidos(html)
         pack['contenidos'] = contenidos
-        collection.insert_one(pack)
+        try:
+                collection.insert_one(pack)
+        except:
+                print('Ha ocurrido un error')
+
         return pack,html
         
         
