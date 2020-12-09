@@ -1,5 +1,6 @@
 from crawl_web import crawl_web
 from todos_paquetes_link import todos_paquetes_link
+from convertir_string import convertir_string
 from urllib.request import urlopen
 import pymongo
 from pymongo import MongoClient
@@ -13,11 +14,7 @@ def web_scrapping (link):
     lista = []
     links = crawl_web(link)
     for enlace in links:
-        packs_de_un_link = []
-        url = enlace
-        page = urlopen(url)
-        html_bytes = page.read()
-        html = html_bytes.decode("utf-8")
+        html = convertir_string(enlace)
         buscador = html.find('nombre')
         if buscador != -1:
             packs_de_un_link = todos_paquetes_link(html)
