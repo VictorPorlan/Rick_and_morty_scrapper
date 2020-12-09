@@ -1,0 +1,138 @@
+
+@font-face{font-family:"Dr.Marz";
+  src: url("..\..\Tipografia\Dr.Marz.otf") format("otf")}
+
+@font-face { font-family: "Get Schwifty";
+  src: url("..\..\Tipografia\get_schwifty.ttf") format("ttf");
+}
+@font-face{ font-family: "Shlop";
+  src: url("..\..\Tipografia\pepinillo.ttf") format("ttf");
+}
+
+body{margin-right: 20%;
+margin-left: 20%;
+}
+
+h1.principal{font-family: "Get Schwifty";
+  color: rgb(146, 235, 4);
+  font-size: 70px;
+  text-shadow:
+  -1.5px -1.5px rgb(54, 87, 1),  
+  1.5px -1.5px rgb(54, 87, 1),
+  -1.5px 1.5px  rgb(54, 87, 1),
+  1.5px 1.5px  rgb(54, 87, 1);
+;
+}
+
+div.logo{
+  text-align: center;
+}
+
+img.logo{
+  width: 25%;
+  height: 25%;
+}
+
+/*Este es el título de tipo de pack*/
+div.titulo h1{font-family: "Shlop";
+  color:rgb(122, 196, 4);
+  font-size: 50px;
+  letter-spacing: 2px;
+  text-shadow:
+  -1.5px -1.5px rgb(31, 51, 0),  
+  1.5px -1.5px rgb(31, 51, 0),
+  -1.5px 1.5px  rgb(31, 51, 0),
+  1.5px 1.5px rgb(31, 51, 0);}
+
+img.imgpack{
+width: 30%;
+height: 30%;
+}
+
+.superdiv{margin-top: 10%;
+background-color: transparent;
+text-align: center;
+}
+
+ul{list-style-type: none;
+  padding-left: 0}
+
+html {
+    background-image: url("fondo.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100%;
+  }
+
+
+  div.pack{padding: 100px; 
+    border: 10px solid purple; 
+    border-radius: 20px; 
+    margin-top: 50px; 
+    margin-left: 20px;
+    margin-right: 20px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.8);
+    font-family: Arial, Helvetica, sans-serif;
+    }
+
+    div.titulo{padding: 100px; 
+  border: 10px solid blue; 
+  border-radius: 20px; 
+  margin-top: 50px; 
+  margin-left: 20px;
+  margin-right: 20px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.8);
+  }
+  li.calidad{
+    font-size: 200%;
+    color: white;
+    font-family: Impact, Haettenschweiler, sans-serif;
+  }
+  h2.nombre{font-family: "Shlop";
+    color:rgb(122, 196, 4);
+    font-size: 50px;
+    letter-spacing: 2px;
+    text-shadow:
+    -1.5px -1.5px rgb(31, 51, 0),  
+    1.5px -1.5px rgb(31, 51, 0),
+    -1.5px 1.5px  rgb(31, 51, 0),
+    1.5px 1.5px rgb(31, 51, 0);}
+  li.precio{
+    color: red;
+    font-size: 200%;
+    font-family: Impact, Haettenschweiler, sans-serif;
+    text-decoration: underline;
+}
+  li.objeto{
+    font-size: 75%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color:green;
+  }
+  li.caracteristica{
+    font-size: 75%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+  }
+  li.contenidos{
+    font-size: 200%;
+    font-family: impact;
+  }
+  ul.indice{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+  nav.indice{
+    padding: 100px; 
+    border: 10px solid purple; 
+    border-radius: 20px; 
+    margin-top: 50px; 
+    margin-left: 20px;
+    margin-right: 20px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.8);
+    font-family: Arial, Helvetica, sans-serif
+  }
