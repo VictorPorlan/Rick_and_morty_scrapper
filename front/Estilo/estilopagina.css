@@ -49,7 +49,8 @@ background-color: transparent;
 text-align: center;
 }
 
-ul{list-style-type: none;}
+ul{list-style-type: none;
+  padding-left: 0}
 
 html {
     background-image: url("fondo.jpg");
@@ -67,7 +68,8 @@ html {
     margin-right: 20px;
     color: white;
     background-color: rgba(0, 0, 0, 0.8);
-    font-family: Arial, Helvetica, sans-serif;}
+    font-family: Arial, Helvetica, sans-serif;
+    }
 
     div.titulo{padding: 100px; 
   border: 10px solid blue; 
@@ -78,5 +80,14 @@ html {
   color: white;
   background-color: rgba(0, 0, 0, 0.8);
   }
-
-  div.pack li{font-family:"Dr.Marz";}
+  li.calidad{
+    font-size: 200%;
+    color: white;
+    font-family: Impact, Haettenschweiler, sans-serif;
+  }
+  li.precio{
+    color: red;
+    font-size: 200%;
+    font-family: Impact, Haettenschweiler, sans-serif;
+    text-decoration: underline;
+}
