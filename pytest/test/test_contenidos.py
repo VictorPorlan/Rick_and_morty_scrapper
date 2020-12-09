@@ -1,0 +1,4 @@
+from src.crear_contenidos import crear_contenidos
+
+def test_crear_contenidos():
+    assert crear_contenidos("<li class='contenidos'>Contenidos de la mochila<ul><li class='objeto'><h3>Rifle de pulso</h3><ul class='lista'><section><li class='caracteristica'>Color: Verde</li><li class='caracteristica'>Cantidad: 1</li><li class='caracteristica'>Material: Cadmio</li><li class='caracteristica'>Calidad: Decente</li></section></ul></li><li class='objeto'><h3>Poción del arcoiris</h3><ul class='lista'><section><li class='caracteristica'>Color: multicolor</li><li class='caracteristica'>Cantidad: 3</li><li class='caracteristica'>Calidad: Más o menos</li></section></ul></li></ul></li></ul></div>") == ({'Rifle de pulso': {'caracteristicas': {'Color': 'Verde', 'Cantidad': '1', 'Material': 'Cadmio', 'Calidad': 'Decente'}}, 'Poción del arcoiris': {'caracteristicas': {'Color': 'multicolor', 'Cantidad': '3', 'Calidad': 'Más o menos'}}}, 'ction></ul></li></ul></li></ul></div>')

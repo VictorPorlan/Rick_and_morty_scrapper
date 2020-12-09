@@ -1,4 +1,4 @@
-from localizar_links import localizar_links
+from src.localizar_links import localizar_links
 def conseguir_links(html):
     links = []
     while True:
