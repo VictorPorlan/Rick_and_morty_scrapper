@@ -4,13 +4,17 @@ from convertir_string import convertir_string
 from urllib.request import urlopen
 import pymongo
 from pymongo import MongoClient
+import sys
 cluster= MongoClient("mongodb+srv://diciembre:proyectodediciembre@proyectodiciembre.gvt0s.mongodb.net/<dbname>?retryWrites=true&w=majority")
 db = cluster["Scrapping"]
 collection = db["packs"]
 
 link = "https://bertavr.github.io/Proyecto_Rick_y_Morty/index.html"
 def web_scrapping (link):
-    collection.drop()
+    try:
+        collection.drop()
+    except:
+        sys.exit('No se ha podido reiniciar la colección. Intentalo de nuevo.')
     lista = []
     links = crawl_web(link)
     for enlace in links:
