@@ -1,23 +1,24 @@
 from crawl_web import crawl_web
 from todos_paquetes_link import todos_paquetes_link
+from convertir_string import convertir_string
 from urllib.request import urlopen
 import pymongo
 from pymongo import MongoClient
+import sys
 cluster= MongoClient("mongodb+srv://diciembre:proyectodediciembre@proyectodiciembre.gvt0s.mongodb.net/<dbname>?retryWrites=true&w=majority")
 db = cluster["Scrapping"]
 collection = db["packs"]
 
 link = "https://bertavr.github.io/Proyecto_Rick_y_Morty/index.html"
 def web_scrapping (link):
-    collection.drop()
+    try:
+        collection.drop()
+    except:
+        sys.exit('No se ha podido reiniciar la colección. Intentalo de nuevo.')
     lista = []
     links = crawl_web(link)
     for enlace in links:
-        packs_de_un_link = []
-        url = enlace
-        page = urlopen(url)
-        html_bytes = page.read()
-        html = html_bytes.decode("utf-8")
+        html = convertir_string(enlace)
         buscador = html.find('nombre')
         if buscador != -1:
             packs_de_un_link = todos_paquetes_link(html)
