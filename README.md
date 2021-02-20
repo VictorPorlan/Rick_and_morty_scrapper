@@ -31,6 +31,6 @@ Para visualizar nuestro sitio web, este es el enlace: [página principal venta d
 Si en vez de entrar en la web a través de el enlace pretendes visualizar las páginas web desde los archivos html que hay en el repositorio, recuerda instalar las tipografías. 
 ## Autores
 Autores: Berta Verges y Víctor Porlan.
-    Gracias a todos los profesores de DAW dual por toda la ayuda y a nuestro mentor Mateu Massó por dedicar parte de su tiempo a ayudarnos con todas nuestras dudas.
+    Gracias a todos los profesores de DAW dual por toda la ayuda y a nuestro mentor [mmasso](https://github.com/mmasso) por dedicar parte de su tiempo a ayudarnos con todas nuestras dudas.
 
 
