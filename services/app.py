@@ -9,7 +9,7 @@ cluster= MongoClient("mongodb+srv://diciembre:proyectodediciembre@proyectodiciem
 db = cluster["Scrapping"]
 collection = db["packs"]
 
-link = "https://bertavr.github.io/Proyecto_Rick_y_Morty/index.html"
+link = "https://victorporlan.github.io/Rick_and_morty_scrapper/index.html"
 def web_scrapping (link):
     try:
         collection.drop()
